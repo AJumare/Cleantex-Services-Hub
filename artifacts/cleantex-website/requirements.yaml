@@ -1,0 +1,17 @@
+packages:
+  "framer-motion": "For premium smooth scroll reveals and component entrance animations"
+  "react-hook-form": "For robust contact form state management"
+  "@hookform/resolvers": "For Zod validation integration"
+  "zod": "For schema-based contact form validation"
+  "clsx": "For conditional class merging"
+  "tailwind-merge": "For class merging"
+
+images:
+  - path: "artifacts/cleantex-website/public/images/hero-bg.png"
+    description: "Abstract gradient mesh background in very light grey, soft mint green, and pale blue-grey. Very clean, corporate, and minimalist. Soft flowing waves reminiscent of water and clean air."
+    aspect_ratio: "16:9"
+
+notes:
+  - Static frontend site with dummy form submission
+  - Using framer-motion for all scroll animations
+  - Uses a cohesive Deep Green and Blue-Grey color palette
