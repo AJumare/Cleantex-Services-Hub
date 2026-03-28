@@ -25,8 +25,8 @@ export function Navbar() {
     <nav
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         isScrolled
-          ? "bg-white/90 backdrop-blur-md shadow-sm py-3"
-          : "bg-transparent py-5"
+          ? "bg-white/90 backdrop-blur-md shadow-sm py-1"
+          : "bg-transparent py-1"
       }`}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -36,7 +36,7 @@ export function Navbar() {
             <img
               src="/images/cleantex-logo.png"
               alt="Cleantex Environmental Services Limited"
-              className="h-56 w-auto object-contain group-hover:opacity-90 transition-opacity"
+              className="h-56 w-auto object-contain -my-10 group-hover:opacity-90 transition-opacity"
             />
           </a>
 

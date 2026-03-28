@@ -3,7 +3,7 @@ import { ArrowRight, PhoneCall } from "lucide-react";
 
 export function Hero() {
   return (
-    <section id="home" className="relative min-h-[90vh] flex items-center pt-20 overflow-hidden">
+    <section id="home" className="relative min-h-[90vh] flex items-center pt-40 overflow-hidden">
       {/* Background Image */}
       <div className="absolute inset-0 z-0">
         <img
