@@ -36,7 +36,7 @@ export function Navbar() {
             <img
               src="/images/cleantex-logo.png"
               alt="Cleantex Environmental Services Limited"
-              className="h-24 w-auto object-contain group-hover:opacity-90 transition-opacity"
+              className="h-28 w-auto object-contain group-hover:opacity-90 transition-opacity"
             />
           </a>
 

@@ -14,7 +14,7 @@ export function Footer() {
               <img
                 src="/images/cleantex-logo.png"
                 alt="Cleantex Environmental Services Limited"
-                className="h-24 w-auto object-contain brightness-0 invert group-hover:opacity-80 transition-opacity"
+                className="h-28 w-auto object-contain brightness-0 invert group-hover:opacity-80 transition-opacity"
               />
             </a>
             <p className="text-white/60 mb-6 leading-relaxed">
