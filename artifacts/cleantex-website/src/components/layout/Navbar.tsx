@@ -34,9 +34,9 @@ export function Navbar() {
           {/* Logo */}
           <a href="#home" className="flex items-center group">
             <img
-              src="/images/cleantex-logo.jpg"
+              src="/images/cleantex-logo.png"
               alt="Cleantex Environmental Services Limited"
-              className="h-12 w-auto object-contain group-hover:opacity-90 transition-opacity"
+              className="h-24 w-auto object-contain group-hover:opacity-90 transition-opacity"
             />
           </a>
 

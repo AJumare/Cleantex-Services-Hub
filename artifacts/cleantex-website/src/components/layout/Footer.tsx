@@ -12,9 +12,9 @@ export function Footer() {
           <div className="lg:col-span-1">
             <a href="#home" className="inline-flex mb-6 group">
               <img
-                src="/images/cleantex-logo.jpg"
+                src="/images/cleantex-logo.png"
                 alt="Cleantex Environmental Services Limited"
-                className="h-12 w-auto object-contain brightness-0 invert group-hover:opacity-80 transition-opacity"
+                className="h-24 w-auto object-contain brightness-0 invert group-hover:opacity-80 transition-opacity"
               />
             </a>
             <p className="text-white/60 mb-6 leading-relaxed">
