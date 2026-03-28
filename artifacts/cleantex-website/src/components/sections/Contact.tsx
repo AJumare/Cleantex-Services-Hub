@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import * as z from "zod";
-import { MapPin, Phone, Mail, Clock, Send } from "lucide-react";
+import { MapPin, Phone, Mail, Clock, Send, MessageCircle } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
 
 const formSchema = z.object({
@@ -144,14 +144,24 @@ export function Contact() {
             <div className="relative z-10">
               <h4 className="text-2xl font-bold mb-8 text-white">Contact Information</h4>
               
-              <div className="space-y-8">
+              <div className="space-y-7">
                 <div className="flex items-start gap-4">
                   <div className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center shrink-0">
                     <Phone size={20} className="text-accent" />
                   </div>
                   <div>
                     <p className="text-sm text-secondary-foreground/70 mb-1">Call Us</p>
-                    <p className="font-semibold text-white text-lg">+234 (0) 803 000 0000</p>
+                    <a href="tel:08064551684" className="font-semibold text-white text-lg hover:text-accent transition-colors">08064551684</a>
+                  </div>
+                </div>
+
+                <div className="flex items-start gap-4">
+                  <div className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center shrink-0">
+                    <MessageCircle size={20} className="text-accent" />
+                  </div>
+                  <div>
+                    <p className="text-sm text-secondary-foreground/70 mb-1">WhatsApp (24hrs)</p>
+                    <a href="https://wa.me/2348064551684" target="_blank" rel="noopener noreferrer" className="font-semibold text-white text-lg hover:text-accent transition-colors">08064551684</a>
                   </div>
                 </div>
 
@@ -161,7 +171,7 @@ export function Contact() {
                   </div>
                   <div>
                     <p className="text-sm text-secondary-foreground/70 mb-1">Email Us</p>
-                    <p className="font-semibold text-white text-lg">info@cleantex.ng</p>
+                    <a href="mailto:Cleantexnigeria@gmail.com" className="font-semibold text-white text-lg hover:text-accent transition-colors">Cleantexnigeria@gmail.com</a>
                   </div>
                 </div>
 
@@ -170,8 +180,8 @@ export function Contact() {
                     <MapPin size={20} className="text-accent" />
                   </div>
                   <div>
-                    <p className="text-sm text-secondary-foreground/70 mb-1">Location</p>
-                    <p className="font-semibold text-white text-lg">Abuja, Federal Capital Territory, Nigeria</p>
+                    <p className="text-sm text-secondary-foreground/70 mb-1">Address</p>
+                    <p className="font-semibold text-white text-lg">No. 28 Liverpool Close, Suncity Estate, Abuja</p>
                   </div>
                 </div>
 
@@ -180,8 +190,9 @@ export function Contact() {
                     <Clock size={20} className="text-accent" />
                   </div>
                   <div>
-                    <p className="text-sm text-secondary-foreground/70 mb-1">Working Hours</p>
-                    <p className="font-semibold text-white text-lg">Mon-Sat: 8am - 6pm</p>
+                    <p className="text-sm text-secondary-foreground/70 mb-1">Office Hours</p>
+                    <p className="font-semibold text-white">Mon–Fri: 8:30am – 4:30pm</p>
+                    <p className="text-white/70 text-sm mt-1">WhatsApp available 24 hours</p>
                   </div>
                 </div>
               </div>

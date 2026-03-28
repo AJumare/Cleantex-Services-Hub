@@ -1,4 +1,4 @@
-import { Facebook, Twitter, Instagram, Linkedin } from "lucide-react";
+import { Facebook, Instagram } from "lucide-react";
 
 export function Footer() {
   const currentYear = new Date().getFullYear();
@@ -21,17 +21,14 @@ export function Footer() {
               Delivering reliable, high-quality cleaning and pest control results for homes and businesses across Abuja, Nigeria.
             </p>
             <div className="flex gap-4">
-              <a href="#" className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-primary transition-colors">
+              <a href="https://www.facebook.com/cleantexenvironmentalservices" target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-primary transition-colors">
                 <Facebook size={18} />
               </a>
-              <a href="#" className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-primary transition-colors">
-                <Twitter size={18} />
-              </a>
-              <a href="#" className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-primary transition-colors">
+              <a href="https://www.instagram.com/cleantexnigeria" target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-primary transition-colors">
                 <Instagram size={18} />
               </a>
-              <a href="#" className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-primary transition-colors">
-                <Linkedin size={18} />
+              <a href="https://wa.me/2348064551684" target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-primary transition-colors text-sm font-bold">
+                WA
               </a>
             </div>
           </div>
@@ -60,18 +57,16 @@ export function Footer() {
             </ul>
           </div>
 
-          {/* Newsletter / Contact mini */}
+          {/* Contact Info */}
           <div>
-            <h4 className="font-bold text-lg mb-6">Service Area</h4>
-            <p className="text-white/70 leading-relaxed mb-4">
-              We proudly serve all districts within the Federal Capital Territory, Abuja.
-            </p>
-            <a 
-              href="#contact" 
-              className="inline-block mt-2 px-6 py-3 rounded-xl bg-white/10 border border-white/20 text-white font-medium hover:bg-primary hover:border-primary transition-colors"
-            >
-              Request a Quote
-            </a>
+            <h4 className="font-bold text-lg mb-6">Contact Us</h4>
+            <ul className="space-y-3 text-white/70 text-sm">
+              <li>📍 No. 28 Liverpool Close, Suncity Estate, Abuja</li>
+              <li><a href="tel:08064551684" className="hover:text-primary transition-colors">📞 08064551684</a></li>
+              <li><a href="https://wa.me/2348064551684" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">💬 WhatsApp (24hrs): 08064551684</a></li>
+              <li><a href="mailto:Cleantexnigeria@gmail.com" className="hover:text-primary transition-colors">✉️ Cleantexnigeria@gmail.com</a></li>
+              <li>🕐 Mon–Fri: 8:30am – 4:30pm</li>
+            </ul>
           </div>
         </div>
 
