@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { Menu, X, Leaf } from "lucide-react";
+import { Menu, X } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 
 const navLinks = [
@@ -32,18 +32,12 @@ export function Navbar() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center">
           {/* Logo */}
-          <a href="#home" className="flex items-center gap-2 group">
-            <div className="w-10 h-10 rounded-xl bg-primary flex items-center justify-center text-white shadow-lg shadow-primary/20 group-hover:scale-105 transition-transform">
-              <Leaf size={24} strokeWidth={2.5} />
-            </div>
-            <div className="flex flex-col">
-              <span className="font-display font-extrabold text-2xl leading-none text-foreground">
-                Cleantex
-              </span>
-              <span className="text-[10px] font-bold tracking-widest uppercase text-primary">
-                Environmental Services
-              </span>
-            </div>
+          <a href="#home" className="flex items-center group">
+            <img
+              src="/images/cleantex-logo.jpg"
+              alt="Cleantex Environmental Services Limited"
+              className="h-12 w-auto object-contain group-hover:opacity-90 transition-opacity"
+            />
           </a>
 
           {/* Desktop Nav */}

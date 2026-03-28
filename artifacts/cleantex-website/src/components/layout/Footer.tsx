@@ -1,4 +1,4 @@
-import { Leaf, Facebook, Twitter, Instagram, Linkedin } from "lucide-react";
+import { Facebook, Twitter, Instagram, Linkedin } from "lucide-react";
 
 export function Footer() {
   const currentYear = new Date().getFullYear();
@@ -10,15 +10,12 @@ export function Footer() {
           
           {/* Brand */}
           <div className="lg:col-span-1">
-            <a href="#home" className="flex items-center gap-2 mb-6 group inline-flex">
-              <div className="w-10 h-10 rounded-xl bg-primary flex items-center justify-center text-white">
-                <Leaf size={24} strokeWidth={2.5} />
-              </div>
-              <div className="flex flex-col">
-                <span className="font-display font-extrabold text-2xl leading-none">
-                  Cleantex
-                </span>
-              </div>
+            <a href="#home" className="inline-flex mb-6 group">
+              <img
+                src="/images/cleantex-logo.jpg"
+                alt="Cleantex Environmental Services Limited"
+                className="h-12 w-auto object-contain brightness-0 invert group-hover:opacity-80 transition-opacity"
+              />
             </a>
             <p className="text-white/60 mb-6 leading-relaxed">
               Delivering reliable, high-quality cleaning and pest control results for homes and businesses across Abuja, Nigeria.
