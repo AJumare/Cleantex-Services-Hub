@@ -1,0 +1,8 @@
+uploads = []
+generated = []
+
+[[outputs]]
+id = "j9Kr30na5qngsxy8FL3xs"
+uri = "file://artifacts/cleantex-website/cleantex-dist.tar.gz"
+type = "unspecified"
+title = "Cleantex Website - Production Build"
