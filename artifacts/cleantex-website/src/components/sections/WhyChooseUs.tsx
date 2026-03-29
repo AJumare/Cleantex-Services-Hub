@@ -1,5 +1,15 @@
 import { motion } from "framer-motion";
-import { Users, Leaf, Clock, BadgeCheck } from "lucide-react";
+import { Users, Leaf, Clock, BadgeCheck, ChevronLeft, ChevronRight } from "lucide-react";
+import { useState, useEffect, useCallback } from "react";
+
+const carouselImages = [
+  { src: "/images/work-1.jpg", alt: "Cleantex team cleaning exterior" },
+  { src: "/images/work-2.jpg", alt: "Cleantex team cleaning window" },
+  { src: "/images/work-3.jpg", alt: "Cleantex team deep cleaning" },
+  { src: "/images/work-4.jpg", alt: "Carpet before and after cleaning" },
+  { src: "/images/work-5.jpg", alt: "Chair upholstery before and after" },
+  { src: "/images/work-6.jpg", alt: "Sofa before and after cleaning" },
+];
 
 const reasons = [
   {
@@ -25,6 +35,21 @@ const reasons = [
 ];
 
 export function WhyChooseUs() {
+  const [current, setCurrent] = useState(0);
+
+  const next = useCallback(() => {
+    setCurrent((c) => (c + 1) % carouselImages.length);
+  }, []);
+
+  const prev = () => {
+    setCurrent((c) => (c - 1 + carouselImages.length) % carouselImages.length);
+  };
+
+  useEffect(() => {
+    const timer = setInterval(next, 4000);
+    return () => clearInterval(timer);
+  }, [next]);
+
   return (
     <section id="why-us" className="py-24 bg-background relative overflow-hidden">
       {/* Decorative background element */}
@@ -47,23 +72,55 @@ export function WhyChooseUs() {
               We don't just clean; we care. Our commitment to excellence, environmental safety, and customer satisfaction sets us apart as Abuja's premier environmental services company.
             </p>
             
-            {/* Stock image via Unsplash for visual context */}
-            {/* professional cleaners in uniform */}
-            <div className="relative rounded-3xl overflow-hidden shadow-2xl aspect-[4/3]">
-              <img 
-                src="https://images.unsplash.com/photo-1581578731548-c64695cc6952?q=80&w=2070&auto=format&fit=crop" 
-                alt="Professional cleaning service" 
-                className="w-full h-full object-cover hover:scale-105 transition-transform duration-700"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
-              <div className="absolute bottom-6 left-6 right-6">
-                <div className="bg-white/90 backdrop-blur-md p-4 rounded-xl inline-flex items-center gap-4">
-                  <div className="bg-primary text-white p-3 rounded-lg">
-                    <BadgeCheck size={24} />
+            {/* Image carousel */}
+            <div className="relative rounded-3xl overflow-hidden shadow-2xl aspect-[4/3] group">
+              {carouselImages.map((img, i) => (
+                <img
+                  key={i}
+                  src={img.src}
+                  alt={img.alt}
+                  className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-700 ${i === current ? "opacity-100" : "opacity-0"}`}
+                />
+              ))}
+              <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"></div>
+
+              {/* Prev / Next buttons */}
+              <button
+                onClick={prev}
+                className="absolute left-3 top-1/2 -translate-y-1/2 w-9 h-9 rounded-full bg-white/80 backdrop-blur-sm flex items-center justify-center shadow hover:bg-white transition-colors opacity-0 group-hover:opacity-100"
+                aria-label="Previous image"
+              >
+                <ChevronLeft size={18} className="text-foreground" />
+              </button>
+              <button
+                onClick={next}
+                className="absolute right-3 top-1/2 -translate-y-1/2 w-9 h-9 rounded-full bg-white/80 backdrop-blur-sm flex items-center justify-center shadow hover:bg-white transition-colors opacity-0 group-hover:opacity-100"
+                aria-label="Next image"
+              >
+                <ChevronRight size={18} className="text-foreground" />
+              </button>
+
+              {/* Dot indicators */}
+              <div className="absolute bottom-4 left-1/2 -translate-x-1/2 flex gap-2">
+                {carouselImages.map((_, i) => (
+                  <button
+                    key={i}
+                    onClick={() => setCurrent(i)}
+                    className={`w-2 h-2 rounded-full transition-all ${i === current ? "bg-white w-5" : "bg-white/50"}`}
+                    aria-label={`Go to image ${i + 1}`}
+                  />
+                ))}
+              </div>
+
+              {/* Badge */}
+              <div className="absolute bottom-10 left-6">
+                <div className="bg-white/90 backdrop-blur-md p-3 rounded-xl inline-flex items-center gap-3">
+                  <div className="bg-primary text-white p-2 rounded-lg">
+                    <BadgeCheck size={20} />
                   </div>
                   <div>
-                    <p className="font-bold text-foreground">100% Satisfaction</p>
-                    <p className="text-sm text-muted-foreground">Guaranteed Results</p>
+                    <p className="font-bold text-foreground text-sm">100% Satisfaction</p>
+                    <p className="text-xs text-muted-foreground">Guaranteed Results</p>
                   </div>
                 </div>
               </div>
