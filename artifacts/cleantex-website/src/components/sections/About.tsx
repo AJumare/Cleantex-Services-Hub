@@ -1,12 +1,5 @@
 import { motion } from "framer-motion";
 
-const stats = [
-  { value: "500+", label: "Happy Clients" },
-  { value: "5+", label: "Years Experience" },
-  { value: "10+", label: "Services" },
-  { value: "100%", label: "Satisfaction" },
-];
-
 export function About() {
   return (
     <section id="about" className="py-24 bg-primary text-primary-foreground relative overflow-hidden">
@@ -37,25 +30,18 @@ export function About() {
           </motion.div>
 
           <motion.div
-            initial={{ opacity: 0, scale: 0.95 }}
-            whileInView={{ opacity: 1, scale: 1 }}
+            initial={{ opacity: 0, x: 30 }}
+            whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-            className="grid grid-cols-2 gap-4 sm:gap-6"
+            className="relative rounded-3xl overflow-hidden shadow-2xl aspect-[4/3]"
           >
-            {stats.map((stat, index) => (
-              <div 
-                key={index}
-                className="bg-white/10 backdrop-blur-sm border border-white/20 p-8 rounded-3xl text-center hover:bg-white/15 transition-colors"
-              >
-                <div className="text-4xl sm:text-5xl font-display font-extrabold text-white mb-2">
-                  {stat.value}
-                </div>
-                <div className="text-sm sm:text-base font-medium text-accent">
-                  {stat.label}
-                </div>
-              </div>
-            ))}
+            <img
+              src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?q=80&w=2070&auto=format&fit=crop"
+              alt="Cleantex professional team at work"
+              className="w-full h-full object-cover hover:scale-105 transition-transform duration-700"
+            />
+            <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent"></div>
           </motion.div>
 
         </div>
