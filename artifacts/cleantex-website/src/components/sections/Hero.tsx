@@ -71,6 +71,26 @@ export function Hero() {
               Contact Us
             </a>
           </motion.div>
+
+          {/* Stats strip */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: 0.45 }}
+            className="mt-14 grid grid-cols-2 sm:grid-cols-4 gap-6 max-w-xl"
+          >
+            {[
+              { value: "10+", label: "Years Experience" },
+              { value: "2,000+", label: "Happy Clients" },
+              { value: "6", label: "Core Services" },
+              { value: "100%", label: "Satisfaction" },
+            ].map((stat) => (
+              <div key={stat.label} className="flex flex-col">
+                <span className="text-3xl font-extrabold text-primary">{stat.value}</span>
+                <span className="text-xs text-muted-foreground mt-0.5">{stat.label}</span>
+              </div>
+            ))}
+          </motion.div>
         </div>
       </div>
     </section>

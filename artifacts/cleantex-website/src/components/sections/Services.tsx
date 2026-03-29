@@ -7,6 +7,7 @@ const services = [
     title: "Carpet & Upholstery",
     description: "Deep steam cleaning of carpets, sofas, chairs and fabric surfaces. Removes stains, allergens and odours.",
     icon: Sparkles,
+    popular: true,
   },
   {
     id: 2,
@@ -78,20 +79,42 @@ export function Services() {
             <motion.div
               key={service.id}
               variants={item}
-              className="bg-background rounded-3xl p-8 border border-border shadow-sm hover:shadow-xl hover:border-primary/30 transition-all duration-300 group relative overflow-hidden"
+              className={`rounded-3xl p-8 border transition-all duration-300 group relative overflow-hidden ${
+                service.popular
+                  ? "bg-primary border-primary shadow-2xl shadow-primary/30 scale-105 hover:shadow-3xl hover:-translate-y-1"
+                  : "bg-background border-border shadow-sm hover:shadow-xl hover:border-primary/30"
+              }`}
             >
-              <div className="absolute top-0 right-0 -mt-4 -mr-4 w-24 h-24 bg-gradient-to-br from-accent to-transparent rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-500 blur-2xl"></div>
+              {service.popular && (
+                <div className="absolute top-5 right-5">
+                  <span className="inline-flex items-center gap-1 px-3 py-1 rounded-full bg-white/20 text-white text-xs font-bold tracking-wide uppercase backdrop-blur-sm">
+                    ⭐ Most Popular
+                  </span>
+                </div>
+              )}
+
+              {!service.popular && (
+                <div className="absolute top-0 right-0 -mt-4 -mr-4 w-24 h-24 bg-gradient-to-br from-accent to-transparent rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-500 blur-2xl"></div>
+              )}
               
-              <div className="w-14 h-14 rounded-2xl bg-accent flex items-center justify-center mb-6 text-primary group-hover:scale-110 group-hover:bg-primary group-hover:text-white transition-all duration-300 shadow-sm">
+              <div className={`w-14 h-14 rounded-2xl flex items-center justify-center mb-6 transition-all duration-300 shadow-sm ${
+                service.popular
+                  ? "bg-white/20 text-white group-hover:bg-white/30 group-hover:scale-110"
+                  : "bg-accent text-primary group-hover:scale-110 group-hover:bg-primary group-hover:text-white"
+              }`}>
                 <service.icon size={28} strokeWidth={2} />
               </div>
               
-              <h4 className="text-xl font-bold text-foreground mb-3">{service.title}</h4>
-              <p className="text-muted-foreground leading-relaxed">
+              <h4 className={`text-xl font-bold mb-3 ${service.popular ? "text-white" : "text-foreground"}`}>
+                {service.title}
+              </h4>
+              <p className={`leading-relaxed ${service.popular ? "text-white/80" : "text-muted-foreground"}`}>
                 {service.description}
               </p>
               
-              <div className="mt-6 flex items-center text-primary font-semibold text-sm group-hover:gap-2 transition-all cursor-pointer">
+              <div className={`mt-6 flex items-center font-semibold text-sm transition-all cursor-pointer ${
+                service.popular ? "text-white/90" : "text-primary"
+              }`}>
                 <span>Learn more</span>
                 <ArrowRight size={16} className="ml-1 opacity-0 -translate-x-2 group-hover:opacity-100 group-hover:translate-x-0 transition-all" />
               </div>
