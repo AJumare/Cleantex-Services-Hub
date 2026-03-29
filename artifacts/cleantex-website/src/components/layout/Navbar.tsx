@@ -53,7 +53,9 @@ export function Navbar() {
               </a>
             ))}
             <a
-              href="#contact"
+              href="https://wa.me/2348064551684"
+              target="_blank"
+              rel="noopener noreferrer"
               className="px-6 py-2.5 rounded-full bg-primary text-primary-foreground font-semibold text-sm shadow-lg shadow-primary/25 hover:shadow-xl hover:shadow-primary/30 hover:-translate-y-0.5 transition-all duration-200"
             >
               Get a Quote
@@ -92,7 +94,9 @@ export function Navbar() {
                 </a>
               ))}
               <a
-                href="#contact"
+                href="https://wa.me/2348064551684"
+                target="_blank"
+                rel="noopener noreferrer"
                 onClick={() => setMobileMenuOpen(false)}
                 className="mx-4 mt-2 px-6 py-3 rounded-xl bg-primary text-center text-primary-foreground font-semibold shadow-md"
               >

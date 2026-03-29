@@ -1,4 +1,4 @@
-import { Facebook, Instagram } from "lucide-react";
+import { Facebook, Instagram, MessageCircle } from "lucide-react";
 
 export function Footer() {
   const currentYear = new Date().getFullYear();
@@ -14,7 +14,7 @@ export function Footer() {
               <img
                 src="/images/cleantex-logo.png"
                 alt="Cleantex Environmental Services Limited"
-                className="h-56 w-auto object-contain brightness-0 invert group-hover:opacity-80 transition-opacity"
+                className="h-20 w-auto object-contain brightness-0 invert group-hover:opacity-80 transition-opacity"
               />
             </a>
             <p className="text-white/60 mb-6 leading-relaxed">
@@ -27,8 +27,8 @@ export function Footer() {
               <a href="https://www.instagram.com/cleantexnigeria" target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-primary transition-colors">
                 <Instagram size={18} />
               </a>
-              <a href="https://wa.me/2348064551684" target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-primary transition-colors text-sm font-bold">
-                WA
+              <a href="https://wa.me/2348064551684" target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-primary transition-colors">
+                <MessageCircle size={18} />
               </a>
             </div>
           </div>
