@@ -64,7 +64,9 @@ export function Hero() {
               <ArrowRight size={20} />
             </a>
             <a
-              href="#contact"
+              href="https://wa.me/2348064551684"
+              target="_blank"
+              rel="noopener noreferrer"
               className="inline-flex justify-center items-center gap-2 px-8 py-4 rounded-xl bg-white border-2 border-primary/20 text-foreground font-semibold text-lg hover:border-primary hover:bg-accent/30 transition-all duration-300"
             >
               <PhoneCall size={20} className="text-primary" />
