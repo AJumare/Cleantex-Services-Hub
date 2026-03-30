@@ -1,6 +1,8 @@
 import { motion } from "framer-motion";
 import { Sparkles, Bug, HardHat, Shirt, Home, SprayCan } from "lucide-react";
 
+const waBase = "https://wa.me/2348064551684?text=";
+
 const services = [
   {
     id: 1,
@@ -8,36 +10,42 @@ const services = [
     description: "Deep steam cleaning of carpets, sofas, chairs and fabric surfaces. Removes stains, allergens and odours.",
     icon: Sparkles,
     popular: true,
+    waLink: waBase + encodeURIComponent("Hello Cleantex! I'm interested in your Carpet & Upholstery cleaning service. Please share more details."),
   },
   {
     id: 2,
     title: "Deep Cleaning",
     description: "Thorough top-to-bottom cleaning of homes, offices and commercial spaces. We leave no corner untouched.",
     icon: SprayCan,
+    waLink: waBase + encodeURIComponent("Hello Cleantex! I'm interested in your Deep Cleaning service. Please share more details."),
   },
   {
     id: 3,
     title: "Fumigation & Pest Control",
     description: "Effective elimination of cockroaches, rodents, termites, mosquitoes, and all pests. Safe for families and pets.",
     icon: Bug,
+    waLink: waBase + encodeURIComponent("Hello Cleantex! I'm interested in your Fumigation & Pest Control service. Please share more details."),
   },
   {
     id: 4,
     title: "Post-Construction",
     description: "Removal of construction dust, debris and waste. We prepare your newly built or renovated space for immediate use.",
     icon: HardHat,
+    waLink: waBase + encodeURIComponent("Hello Cleantex! I'm interested in your Post-Construction cleaning service. Please share more details."),
   },
   {
     id: 5,
     title: "Laundry Services",
     description: "Professional washing, drying, ironing and folding of clothes, curtains, linens and more with premium care.",
     icon: Shirt,
+    waLink: waBase + encodeURIComponent("Hello Cleantex! I'm interested in your Laundry Services. Please share more details."),
   },
   {
     id: 6,
     title: "Residential Cleaning",
     description: "Regular cleaning schedules for homes — daily, weekly or monthly. We keep your personal space consistently spotless.",
     icon: Home,
+    waLink: waBase + encodeURIComponent("Hello Cleantex! I'm interested in your Residential Cleaning service. Please share more details."),
   },
 ];
 
@@ -112,12 +120,17 @@ export function Services() {
                 {service.description}
               </p>
               
-              <div className={`mt-6 flex items-center font-semibold text-sm transition-all cursor-pointer ${
-                service.popular ? "text-white/90" : "text-primary"
-              }`}>
+              <a
+                href={service.waLink}
+                target="_blank"
+                rel="noopener noreferrer"
+                className={`mt-6 inline-flex items-center font-semibold text-sm transition-all ${
+                  service.popular ? "text-white/90 hover:text-white" : "text-primary hover:text-primary/80"
+                }`}
+              >
                 <span>Learn more</span>
                 <ArrowRight size={16} className="ml-1 opacity-0 -translate-x-2 group-hover:opacity-100 group-hover:translate-x-0 transition-all" />
-              </div>
+              </a>
             </motion.div>
           ))}
         </motion.div>

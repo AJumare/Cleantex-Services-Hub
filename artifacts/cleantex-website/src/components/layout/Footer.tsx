@@ -21,7 +21,7 @@ export function Footer() {
               Delivering reliable, high-quality cleaning and pest control results for homes and businesses across Abuja, Nigeria.
             </p>
             <div className="flex gap-4">
-              <a href="https://www.facebook.com/cleantexenvironmentalservices" target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-primary transition-colors">
+              <a href="https://www.facebook.com/CleantexNigeria" target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-primary transition-colors">
                 <Facebook size={18} />
               </a>
               <a href="https://www.instagram.com/cleantexnigeria" target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-primary transition-colors">
