@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { ArrowRight, Calendar, Clock } from "lucide-react";
+import { ArrowRight, Calendar, Clock, MessageCircle } from "lucide-react";
 import { Link } from "wouter";
 import { blogPosts } from "@/data/blogPosts";
 
@@ -87,23 +87,23 @@ export function Blog() {
           ))}
         </motion.div>
 
-        <div className="text-center mt-12 flex flex-col sm:flex-row gap-4 justify-center">
-          <a
-            href="https://wa.me/2348064551684"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex items-center justify-center gap-2 w-full sm:w-52 px-8 py-3.5 rounded-xl border-2 border-primary text-primary font-semibold hover:bg-primary hover:text-white transition-all duration-200"
-          >
-            Get Cleaning Advice
-            <ArrowRight size={18} />
-          </a>
+        <div className="text-center mt-12 flex flex-col items-center gap-4">
           <Link
             href="/blog"
-            className="inline-flex items-center justify-center gap-2 w-full sm:w-52 px-8 py-3.5 rounded-xl bg-primary text-primary-foreground font-semibold shadow-lg hover:-translate-y-0.5 hover:shadow-xl transition-all duration-200"
+            className="inline-flex items-center gap-2 px-10 py-4 rounded-2xl bg-primary text-primary-foreground font-semibold text-base shadow-lg shadow-primary/20 hover:-translate-y-0.5 hover:shadow-xl hover:shadow-primary/30 transition-all duration-200"
           >
             See All Articles
             <ArrowRight size={18} />
           </Link>
+          <a
+            href="https://wa.me/2348064551684"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-1.5 text-sm text-muted-foreground hover:text-primary transition-colors"
+          >
+            <MessageCircle size={14} />
+            Have a question? Chat with us on WhatsApp
+          </a>
         </div>
       </div>
     </section>
