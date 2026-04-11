@@ -1,44 +1,9 @@
 import { motion } from "framer-motion";
 import { ArrowRight, Calendar, Clock } from "lucide-react";
+import { Link } from "wouter";
+import { blogPosts } from "@/data/blogPosts";
 
-const posts = [
-  {
-    id: 1,
-    category: "Cleaning Tips",
-    title: "How Often Should You Deep Clean Your Home in Abuja?",
-    excerpt: "Abuja's dust and harmattan season can cause rapid buildup of allergens and grime. Here's a practical schedule to keep your home spotless year-round.",
-    date: "March 15, 2025",
-    readTime: "4 min read",
-    image: "https://images.unsplash.com/photo-1527515545081-5db817172677?q=80&w=2070&auto=format&fit=crop",
-  },
-  {
-    id: 2,
-    category: "Pest Control",
-    title: "5 Warning Signs You Need Professional Fumigation Right Now",
-    excerpt: "From unexplained droppings to strange odours, don't ignore these red flags. Catching a pest problem early saves you time, money and stress.",
-    date: "February 28, 2025",
-    readTime: "5 min read",
-    image: "https://images.unsplash.com/photo-1584813470613-5b1c1cad3d69?q=80&w=2070&auto=format&fit=crop",
-  },
-  {
-    id: 3,
-    category: "Post-Construction",
-    title: "Why Post-Construction Cleaning Is Essential Before Moving In",
-    excerpt: "Cement dust, paint residue and construction debris are more harmful than they look. Discover why professional cleaning makes your new space truly ready.",
-    date: "January 20, 2025",
-    readTime: "3 min read",
-    image: "https://images.unsplash.com/photo-1504307651254-35680f356dfd?q=80&w=2070&auto=format&fit=crop",
-  },
-  {
-    id: 4,
-    category: "Carpet Care",
-    title: "Protecting Your Carpets & Upholstery During Rainy Season",
-    excerpt: "Nigeria's wet season brings mud, humidity and mould risk. Learn professional tips for keeping your fabrics fresh and mould-free all through the rains.",
-    date: "December 10, 2024",
-    readTime: "4 min read",
-    image: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?q=80&w=2070&auto=format&fit=crop",
-  },
-];
+const previewPosts = blogPosts.slice(0, 4);
 
 const container = {
   hidden: { opacity: 0 },
@@ -71,7 +36,7 @@ export function Blog() {
           viewport={{ once: true, margin: "-80px" }}
           className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-7"
         >
-          {posts.map((post) => (
+          {previewPosts.map((post) => (
             <motion.article
               key={post.id}
               variants={item}
@@ -120,14 +85,23 @@ export function Blog() {
           ))}
         </motion.div>
 
-        <div className="text-center mt-12">
+        <div className="text-center mt-12 flex flex-col sm:flex-row gap-4 justify-center">
           <a
-            href="#contact"
+            href="https://wa.me/2348064551684"
+            target="_blank"
+            rel="noopener noreferrer"
             className="inline-flex items-center gap-2 px-8 py-3.5 rounded-xl border-2 border-primary text-primary font-semibold hover:bg-primary hover:text-white transition-all duration-200"
           >
             Get Cleaning Advice
             <ArrowRight size={18} />
           </a>
+          <Link
+            href="/blog"
+            className="inline-flex items-center gap-2 px-8 py-3.5 rounded-xl bg-primary text-primary-foreground font-semibold shadow-lg hover:-translate-y-0.5 hover:shadow-xl transition-all duration-200"
+          >
+            See All Articles
+            <ArrowRight size={18} />
+          </Link>
         </div>
       </div>
     </section>

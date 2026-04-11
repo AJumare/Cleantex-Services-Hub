@@ -1,13 +1,14 @@
 import { useState, useEffect, useRef } from "react";
 import { Menu, X, MessageCircle, Mail, ChevronDown } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
+import { Link } from "wouter";
 
 const navLinks = [
   { name: "Home", href: "#home" },
   { name: "Services", href: "#services" },
   { name: "Why Choose Us", href: "#why-us" },
   { name: "About", href: "#about" },
-  { name: "Blog", href: "#blog" },
+  { name: "Blog", href: "/blog" },
 ];
 
 export function Navbar() {
@@ -53,16 +54,27 @@ export function Navbar() {
 
           {/* Desktop Nav */}
           <div className="hidden md:flex items-center gap-8">
-            {navLinks.map((link) => (
-              <a
-                key={link.name}
-                href={link.href}
-                className="text-sm font-medium text-foreground/80 hover:text-primary transition-colors relative group"
-              >
-                {link.name}
-                <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-primary transition-all group-hover:w-full"></span>
-              </a>
-            ))}
+            {navLinks.map((link) =>
+              link.href.startsWith("/") ? (
+                <Link
+                  key={link.name}
+                  href={link.href}
+                  className="text-sm font-medium text-foreground/80 hover:text-primary transition-colors relative group"
+                >
+                  {link.name}
+                  <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-primary transition-all group-hover:w-full"></span>
+                </Link>
+              ) : (
+                <a
+                  key={link.name}
+                  href={link.href}
+                  className="text-sm font-medium text-foreground/80 hover:text-primary transition-colors relative group"
+                >
+                  {link.name}
+                  <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-primary transition-all group-hover:w-full"></span>
+                </a>
+              )
+            )}
 
             {/* Get a Quote dropdown */}
             <div className="relative" ref={dropdownRef}>
@@ -139,16 +151,27 @@ export function Navbar() {
             className="absolute top-full left-0 right-0 bg-white border-b border-border shadow-lg md:hidden"
           >
             <div className="flex flex-col p-4 gap-4">
-              {navLinks.map((link) => (
-                <a
-                  key={link.name}
-                  href={link.href}
-                  onClick={() => setMobileMenuOpen(false)}
-                  className="px-4 py-2 text-base font-medium text-foreground hover:bg-accent hover:text-primary rounded-lg transition-colors"
-                >
-                  {link.name}
-                </a>
-              ))}
+              {navLinks.map((link) =>
+                link.href.startsWith("/") ? (
+                  <Link
+                    key={link.name}
+                    href={link.href}
+                    onClick={() => setMobileMenuOpen(false)}
+                    className="px-4 py-2 text-base font-medium text-foreground hover:bg-accent hover:text-primary rounded-lg transition-colors"
+                  >
+                    {link.name}
+                  </Link>
+                ) : (
+                  <a
+                    key={link.name}
+                    href={link.href}
+                    onClick={() => setMobileMenuOpen(false)}
+                    className="px-4 py-2 text-base font-medium text-foreground hover:bg-accent hover:text-primary rounded-lg transition-colors"
+                  >
+                    {link.name}
+                  </a>
+                )
+              )}
               <div className="mx-4 mt-2 flex flex-col gap-3">
                 <a
                   href="https://wa.me/2348064551684"
