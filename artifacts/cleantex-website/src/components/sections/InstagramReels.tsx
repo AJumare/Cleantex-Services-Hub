@@ -17,7 +17,10 @@ export function InstagramReels() {
             Watch Us in Action
           </h3>
           <p className="text-lg text-muted-foreground">
-            Real jobs. Real results. Follow us on Instagram to see more of our work across Abuja.
+            Real jobs. Real results.
+          </p>
+          <p className="text-lg text-muted-foreground whitespace-nowrap">
+            Follow us on Instagram to see more of our work across Abuja.
           </p>
         </div>
 
