@@ -8,7 +8,7 @@ const navLinks = [
   { name: "Services", href: "/#services" },
   { name: "Why Choose Us", href: "/#why-us" },
   { name: "About", href: "/#about" },
-  { name: "Videos", href: "/#reels" },
+  { name: "Watch Us in Action", href: "/#reels" },
   { name: "Blog", href: "/blog" },
 ];
 
