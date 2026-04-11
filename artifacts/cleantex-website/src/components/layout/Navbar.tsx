@@ -4,7 +4,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import { Link } from "wouter";
 
 const navLinks = [
-  { name: "Home", href: "#home" },
+  { name: "Home", href: "/" },
   { name: "Services", href: "#services" },
   { name: "Why Choose Us", href: "#why-us" },
   { name: "About", href: "#about" },
