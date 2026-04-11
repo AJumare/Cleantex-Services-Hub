@@ -55,19 +55,32 @@ export function InstagramReels() {
                   />
                 </div>
 
-                {/* Follow CTA per card */}
+                {/* Per-card link to the specific reel */}
                 <a
-                  href="https://www.instagram.com/cleantexnigeria"
+                  href={`https://www.instagram.com/reel/${shortcode}/`}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex items-center justify-center gap-2 py-4 text-sm font-semibold text-pink-600 hover:text-pink-700 transition-colors border-t border-border"
                 >
                   <Instagram size={15} />
-                  Follow @Cleantexnigeria
+                  View on Instagram
                 </a>
               </motion.div>
             ))}
           </motion.div>
+        </div>
+
+        {/* Standalone follow button */}
+        <div className="text-center mt-12">
+          <a
+            href="https://www.instagram.com/cleantexnigeria"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-2.5 px-8 py-3.5 rounded-2xl bg-gradient-to-r from-purple-500 via-pink-500 to-orange-400 text-white font-semibold shadow-lg hover:-translate-y-0.5 hover:shadow-xl transition-all duration-200"
+          >
+            <Instagram size={18} />
+            View / Follow @Cleantexnigeria
+          </a>
         </div>
       </div>
     </section>
