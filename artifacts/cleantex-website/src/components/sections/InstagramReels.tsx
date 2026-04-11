@@ -4,6 +4,7 @@ import { Instagram } from "lucide-react";
 const reels = [
   "DVgGP50jNjF",
   "DNVgTovIXqO",
+  "DJWetxAIU4T",
 ];
 
 const container = {
