@@ -83,7 +83,7 @@ export function Hero() {
           >
             {[
               { value: "10+", label: "Years Experience" },
-              { value: "2,000+", label: "Happy Clients" },
+              { value: "4,800+", label: "Happy Clients" },
               { value: "6", label: "Core Services" },
               { value: "100%", label: "Satisfaction" },
             ].map((stat) => (
