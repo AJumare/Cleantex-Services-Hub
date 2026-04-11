@@ -42,7 +42,7 @@ export function Blog() {
               variants={item}
               className="bg-background rounded-3xl overflow-hidden border border-border shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300 group flex flex-col"
             >
-              <div className="relative overflow-hidden aspect-[16/10]">
+              <Link href={`/blog/${post.slug}`} className="block relative overflow-hidden aspect-[16/10]">
                 <img
                   src={post.image}
                   alt={post.title}
@@ -52,7 +52,7 @@ export function Blog() {
                 <span className="absolute top-4 left-4 px-3 py-1 rounded-full bg-primary text-white text-xs font-semibold">
                   {post.category}
                 </span>
-              </div>
+              </Link>
 
               <div className="p-6 flex flex-col flex-1">
                 <div className="flex items-center gap-4 text-xs text-muted-foreground mb-3">
@@ -66,20 +66,22 @@ export function Blog() {
                   </span>
                 </div>
 
-                <h4 className="font-bold text-foreground text-base leading-snug mb-3 group-hover:text-primary transition-colors flex-1">
-                  {post.title}
-                </h4>
+                <Link href={`/blog/${post.slug}`}>
+                  <h4 className="font-bold text-foreground text-base leading-snug mb-3 group-hover:text-primary transition-colors flex-1 cursor-pointer">
+                    {post.title}
+                  </h4>
+                </Link>
 
                 <p className="text-muted-foreground text-sm leading-relaxed mb-5 line-clamp-3">
                   {post.excerpt}
                 </p>
 
-                <a
-                  href="#contact"
+                <Link
+                  href={`/blog/${post.slug}`}
                   className="inline-flex items-center gap-1 text-primary font-semibold text-sm hover:gap-2 transition-all"
                 >
                   Read more <ArrowRight size={14} />
-                </a>
+                </Link>
               </div>
             </motion.article>
           ))}

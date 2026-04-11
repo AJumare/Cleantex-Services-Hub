@@ -51,7 +51,7 @@ export default function BlogPage() {
                 variants={item}
                 className="bg-white rounded-3xl overflow-hidden border border-border shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300 group flex flex-col"
               >
-                <div className="relative overflow-hidden aspect-[16/10]">
+                <Link href={`/blog/${post.slug}`} className="block relative overflow-hidden aspect-[16/10]">
                   <img
                     src={post.image}
                     alt={post.title}
@@ -61,7 +61,7 @@ export default function BlogPage() {
                   <span className="absolute top-4 left-4 px-3 py-1 rounded-full bg-primary text-white text-xs font-semibold">
                     {post.category}
                   </span>
-                </div>
+                </Link>
 
                 <div className="p-6 flex flex-col flex-1">
                   <div className="flex items-center gap-4 text-xs text-muted-foreground mb-3">
@@ -73,22 +73,22 @@ export default function BlogPage() {
                     </span>
                   </div>
 
-                  <h2 className="font-bold text-foreground text-lg leading-snug mb-3 group-hover:text-primary transition-colors flex-1">
-                    {post.title}
-                  </h2>
+                  <Link href={`/blog/${post.slug}`}>
+                    <h2 className="font-bold text-foreground text-lg leading-snug mb-3 group-hover:text-primary transition-colors flex-1 cursor-pointer">
+                      {post.title}
+                    </h2>
+                  </Link>
 
                   <p className="text-muted-foreground text-sm leading-relaxed mb-5">
                     {post.excerpt}
                   </p>
 
-                  <a
-                    href="https://wa.me/2348064551684"
-                    target="_blank"
-                    rel="noopener noreferrer"
+                  <Link
+                    href={`/blog/${post.slug}`}
                     className="inline-flex items-center gap-1 text-primary font-semibold text-sm hover:gap-2 transition-all"
                   >
-                    Get advice on this <ArrowRight size={14} />
-                  </a>
+                    Read more <ArrowRight size={14} />
+                  </Link>
                 </div>
               </motion.article>
             ))}
