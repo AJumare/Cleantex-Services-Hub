@@ -5,9 +5,9 @@ import { Link } from "wouter";
 
 const navLinks = [
   { name: "Home", href: "/" },
-  { name: "Services", href: "#services" },
-  { name: "Why Choose Us", href: "#why-us" },
-  { name: "About", href: "#about" },
+  { name: "Services", href: "/#services" },
+  { name: "Why Choose Us", href: "/#why-us" },
+  { name: "About", href: "/#about" },
   { name: "Blog", href: "/blog" },
 ];
 
@@ -55,7 +55,7 @@ export function Navbar() {
           {/* Desktop Nav */}
           <div className="hidden md:flex items-center gap-8">
             {navLinks.map((link) =>
-              link.href.startsWith("/") ? (
+              link.href.startsWith("/") && !link.href.includes("#") ? (
                 <Link
                   key={link.name}
                   href={link.href}
@@ -152,7 +152,7 @@ export function Navbar() {
           >
             <div className="flex flex-col p-4 gap-4">
               {navLinks.map((link) =>
-                link.href.startsWith("/") ? (
+                link.href.startsWith("/") && !link.href.includes("#") ? (
                   <Link
                     key={link.name}
                     href={link.href}
