@@ -1,7 +1,7 @@
 import { useState, useEffect, useRef } from "react";
 import { Menu, X, MessageCircle, Mail, ChevronDown } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
-import { Link } from "wouter";
+import { Link, useLocation } from "wouter";
 
 const navLinks = [
   { name: "Home", href: "/" },
@@ -16,6 +16,7 @@ export function Navbar() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [dropdownOpen, setDropdownOpen] = useState(false);
   const dropdownRef = useRef<HTMLDivElement>(null);
+  const [location, setLocation] = useLocation();
 
   useEffect(() => {
     const handleScroll = () => setIsScrolled(window.scrollY > 20);
@@ -33,6 +34,25 @@ export function Navbar() {
     return () => document.removeEventListener("mousedown", handleClickOutside);
   }, []);
 
+  const handleNavClick = (e: React.MouseEvent, href: string) => {
+    if (href.startsWith("/#")) {
+      e.preventDefault();
+      const sectionId = href.slice(2);
+      setMobileMenuOpen(false);
+      if (location === "/") {
+        document.getElementById(sectionId)?.scrollIntoView({ behavior: "smooth" });
+      } else {
+        setLocation("/");
+        setTimeout(() => {
+          document.getElementById(sectionId)?.scrollIntoView({ behavior: "smooth" });
+        }, 150);
+      }
+    }
+  };
+
+  const linkClass = "text-sm font-medium text-foreground/80 hover:text-primary transition-colors relative group";
+  const mobileLinkClass = "px-4 py-2 text-base font-medium text-foreground hover:bg-accent hover:text-primary rounded-lg transition-colors";
+
   return (
     <nav
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
@@ -44,7 +64,7 @@ export function Navbar() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center">
           {/* Logo */}
-          <a href="#home" className="flex items-center group">
+          <a href="/" className="flex items-center group">
             <img
               src="/images/cleantex-logo.png"
               alt="Cleantex Environmental Services Limited"
@@ -55,24 +75,25 @@ export function Navbar() {
           {/* Desktop Nav */}
           <div className="hidden md:flex items-center gap-8">
             {navLinks.map((link) =>
-              link.href.startsWith("/") && !link.href.includes("#") ? (
-                <Link
-                  key={link.name}
-                  href={link.href}
-                  className="text-sm font-medium text-foreground/80 hover:text-primary transition-colors relative group"
-                >
-                  {link.name}
-                  <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-primary transition-all group-hover:w-full"></span>
-                </Link>
-              ) : (
+              link.href.startsWith("/#") ? (
                 <a
                   key={link.name}
                   href={link.href}
-                  className="text-sm font-medium text-foreground/80 hover:text-primary transition-colors relative group"
+                  onClick={(e) => handleNavClick(e, link.href)}
+                  className={linkClass}
                 >
                   {link.name}
                   <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-primary transition-all group-hover:w-full"></span>
                 </a>
+              ) : (
+                <Link
+                  key={link.name}
+                  href={link.href}
+                  className={linkClass}
+                >
+                  {link.name}
+                  <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-primary transition-all group-hover:w-full"></span>
+                </Link>
               )
             )}
 
@@ -112,8 +133,8 @@ export function Navbar() {
                     </a>
                     <div className="border-t border-border" />
                     <a
-                      href="#contact"
-                      onClick={() => setDropdownOpen(false)}
+                      href="/#contact"
+                      onClick={(e) => { handleNavClick(e, "/#contact"); setDropdownOpen(false); }}
                       className="flex items-center gap-3 px-5 py-4 hover:bg-accent/50 transition-colors"
                     >
                       <div className="w-8 h-8 rounded-full bg-primary/10 flex items-center justify-center">
@@ -152,24 +173,24 @@ export function Navbar() {
           >
             <div className="flex flex-col p-4 gap-4">
               {navLinks.map((link) =>
-                link.href.startsWith("/") && !link.href.includes("#") ? (
+                link.href.startsWith("/#") ? (
+                  <a
+                    key={link.name}
+                    href={link.href}
+                    onClick={(e) => handleNavClick(e, link.href)}
+                    className={mobileLinkClass}
+                  >
+                    {link.name}
+                  </a>
+                ) : (
                   <Link
                     key={link.name}
                     href={link.href}
                     onClick={() => setMobileMenuOpen(false)}
-                    className="px-4 py-2 text-base font-medium text-foreground hover:bg-accent hover:text-primary rounded-lg transition-colors"
+                    className={mobileLinkClass}
                   >
                     {link.name}
                   </Link>
-                ) : (
-                  <a
-                    key={link.name}
-                    href={link.href}
-                    onClick={() => setMobileMenuOpen(false)}
-                    className="px-4 py-2 text-base font-medium text-foreground hover:bg-accent hover:text-primary rounded-lg transition-colors"
-                  >
-                    {link.name}
-                  </a>
                 )
               )}
               <div className="mx-4 mt-2 flex flex-col gap-3">
@@ -184,8 +205,8 @@ export function Navbar() {
                   WhatsApp Us
                 </a>
                 <a
-                  href="#contact"
-                  onClick={() => setMobileMenuOpen(false)}
+                  href="/#contact"
+                  onClick={(e) => { handleNavClick(e, "/#contact"); }}
                   className="flex items-center justify-center gap-2 px-6 py-3 rounded-xl border-2 border-primary text-primary font-semibold"
                 >
                   <Mail size={18} />
