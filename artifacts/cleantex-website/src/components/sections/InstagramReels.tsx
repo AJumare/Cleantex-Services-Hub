@@ -40,8 +40,8 @@ export function InstagramReels() {
                 className="rounded-3xl overflow-hidden shadow-lg border border-border bg-white flex-shrink-0 flex flex-col"
                 style={{ width: 308 }}
               >
-                {/* Cropped iframe with fade overlay */}
-                <div className="relative overflow-hidden" style={{ height: 360 }}>
+                {/* Crop the Instagram embed header (~56px) at the top */}
+                <div className="overflow-hidden" style={{ height: 360 }}>
                   <iframe
                     src={`https://www.instagram.com/reel/${shortcode}/embed/`}
                     width="308"
@@ -51,37 +51,23 @@ export function InstagramReels() {
                     allow="autoplay; clipboard-write; encrypted-media; picture-in-picture"
                     title="Cleantex Instagram Reel"
                     className="block"
-                    style={{ marginTop: 0 }}
+                    style={{ marginTop: -56 }}
                   />
-                  {/* Fade gradient at the bottom */}
-                  <div className="absolute bottom-0 left-0 right-0 h-28 bg-gradient-to-t from-white via-white/80 to-transparent pointer-events-none" />
                 </div>
 
-                {/* View more CTA */}
+                {/* Follow CTA per card */}
                 <a
-                  href={`https://www.instagram.com/reel/${shortcode}/`}
+                  href="https://www.instagram.com/cleantexnigeria"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex items-center justify-center gap-2 py-4 text-sm font-semibold text-pink-600 hover:text-pink-700 transition-colors border-t border-border"
                 >
                   <Instagram size={15} />
-                  View on Instagram
+                  Follow @Cleantexnigeria
                 </a>
               </motion.div>
             ))}
           </motion.div>
-        </div>
-
-        <div className="text-center mt-12">
-          <a
-            href="https://www.instagram.com/cleantexnigeria"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex items-center gap-2.5 px-8 py-3.5 rounded-2xl bg-gradient-to-r from-purple-500 via-pink-500 to-orange-400 text-white font-semibold shadow-lg hover:-translate-y-0.5 hover:shadow-xl transition-all duration-200"
-          >
-            <Instagram size={18} />
-            Follow @Cleantexnigeria
-          </a>
         </div>
       </div>
     </section>
