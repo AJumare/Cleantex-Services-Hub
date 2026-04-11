@@ -37,19 +37,36 @@ export function InstagramReels() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: i * 0.12, duration: 0.4 }}
-                className="rounded-3xl overflow-hidden shadow-lg border border-border bg-white flex-shrink-0"
+                className="rounded-3xl overflow-hidden shadow-lg border border-border bg-white flex-shrink-0 flex flex-col"
                 style={{ width: 308 }}
               >
-                <iframe
-                  src={`https://www.instagram.com/reel/${shortcode}/embed/`}
-                  width="308"
-                  height="540"
-                  frameBorder="0"
-                  scrolling="no"
-                  allow="autoplay; clipboard-write; encrypted-media; picture-in-picture"
-                  title="Cleantex Instagram Reel"
-                  className="block"
-                />
+                {/* Cropped iframe with fade overlay */}
+                <div className="relative overflow-hidden" style={{ height: 360 }}>
+                  <iframe
+                    src={`https://www.instagram.com/reel/${shortcode}/embed/`}
+                    width="308"
+                    height="540"
+                    frameBorder="0"
+                    scrolling="no"
+                    allow="autoplay; clipboard-write; encrypted-media; picture-in-picture"
+                    title="Cleantex Instagram Reel"
+                    className="block"
+                    style={{ marginTop: 0 }}
+                  />
+                  {/* Fade gradient at the bottom */}
+                  <div className="absolute bottom-0 left-0 right-0 h-28 bg-gradient-to-t from-white via-white/80 to-transparent pointer-events-none" />
+                </div>
+
+                {/* View more CTA */}
+                <a
+                  href={`https://www.instagram.com/reel/${shortcode}/`}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center justify-center gap-2 py-4 text-sm font-semibold text-pink-600 hover:text-pink-700 transition-colors border-t border-border"
+                >
+                  <Instagram size={15} />
+                  View on Instagram
+                </a>
               </motion.div>
             ))}
           </motion.div>
