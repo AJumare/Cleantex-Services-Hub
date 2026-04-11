@@ -90,14 +90,14 @@ export function Blog() {
             href="https://wa.me/2348064551684"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 px-8 py-3.5 rounded-xl border-2 border-primary text-primary font-semibold hover:bg-primary hover:text-white transition-all duration-200"
+            className="inline-flex items-center justify-center gap-2 w-full sm:w-52 px-8 py-3.5 rounded-xl border-2 border-primary text-primary font-semibold hover:bg-primary hover:text-white transition-all duration-200"
           >
             Get Cleaning Advice
             <ArrowRight size={18} />
           </a>
           <Link
             href="/blog"
-            className="inline-flex items-center gap-2 px-8 py-3.5 rounded-xl bg-primary text-primary-foreground font-semibold shadow-lg hover:-translate-y-0.5 hover:shadow-xl transition-all duration-200"
+            className="inline-flex items-center justify-center gap-2 w-full sm:w-52 px-8 py-3.5 rounded-xl bg-primary text-primary-foreground font-semibold shadow-lg hover:-translate-y-0.5 hover:shadow-xl transition-all duration-200"
           >
             See All Articles
             <ArrowRight size={18} />
