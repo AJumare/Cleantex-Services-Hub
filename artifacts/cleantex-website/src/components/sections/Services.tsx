@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { Sparkles, Bug, HardHat, Shirt, Home, SprayCan } from "lucide-react";
+import { Sparkles, Bug, HardHat, Shirt, Home, SprayCan, Building2, Users } from "lucide-react";
 
 const waBase = "https://wa.me/2348064551684?text=";
 
@@ -46,6 +46,20 @@ const services = [
     description: "Regular cleaning schedules for homes — daily, weekly or monthly. We keep your personal space consistently spotless.",
     icon: Home,
     waLink: waBase + encodeURIComponent("Hello Cleantex! I'm interested in your Residential Cleaning service. Please share more details."),
+  },
+  {
+    id: 7,
+    title: "Janitorial Services",
+    description: "Managed cleaning for offices, commercial spaces, and facilities. Regular schedules, trained teams, all supplies included.",
+    icon: Building2,
+    waLink: waBase + encodeURIComponent("Hello Cleantex! I'm interested in your Janitorial Services. Please share more details."),
+  },
+  {
+    id: 8,
+    title: "Cleaning Staff Outsourcing",
+    description: "Vetted, trained cleaning personnel deployed to your site under your supervision. Flexible contracts, zero recruitment stress.",
+    icon: Users,
+    waLink: waBase + encodeURIComponent("Hello Cleantex! I'm interested in your Cleaning Staff Outsourcing service. Please share more details."),
   },
 ];
 
