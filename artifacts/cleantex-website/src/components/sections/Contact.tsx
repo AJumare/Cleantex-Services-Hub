@@ -29,25 +29,34 @@ export function Contact() {
     resolver: zodResolver(formSchema),
   });
 
-  const onSubmit = (data: FormValues) => {
+  const onSubmit = async (data: FormValues) => {
     setIsSubmitting(true);
+    try {
+      const res = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(data),
+      });
 
-    const subject = encodeURIComponent(
-      `Quote Request - ${data.service} | ${data.name}`
-    );
-    const body = encodeURIComponent(
-      `Name: ${data.name}\nEmail: ${data.email}\nPhone: ${data.phone}\nService: ${data.service}\n\nMessage:\n${data.message}`
-    );
+      if (!res.ok) {
+        const err = await res.json().catch(() => ({}));
+        throw new Error((err as { error?: string }).error ?? "Server error");
+      }
 
-    window.location.href = `mailto:cleantexnigeria@gmail.com?subject=${subject}&body=${body}`;
-
-    toast({
-      title: "Opening your email app...",
-      description: "Your message is pre-filled. Just hit send to reach us.",
-    });
-
-    reset();
-    setIsSubmitting(false);
+      toast({
+        title: "Message sent!",
+        description: "We'll get back to you with a quote shortly.",
+      });
+      reset();
+    } catch (err) {
+      toast({
+        title: "Something went wrong",
+        description: err instanceof Error ? err.message : "Please try again or reach us on WhatsApp.",
+        variant: "destructive",
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
