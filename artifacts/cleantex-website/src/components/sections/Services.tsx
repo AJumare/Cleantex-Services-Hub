@@ -65,7 +65,7 @@ const services = [
   {
     id: 8,
     title: "Cleaning Staff Outsourcing",
-    description: "Vetted, trained cleaning personnel deployed to your site under your supervision. Flexible contracts, zero recruitment stress.",
+    description: "Vetted, trained cleaning personnel deployed to businesses and organisations. Work under your supervision - flexible contracts, zero recruitment stress.",
     icon: Users,
     slug: "/services/cleaning-staff-outsourcing",
     waLink: waBase + encodeURIComponent("Hello Cleantex! I'm interested in your Cleaning Staff Outsourcing service. Please share more details."),

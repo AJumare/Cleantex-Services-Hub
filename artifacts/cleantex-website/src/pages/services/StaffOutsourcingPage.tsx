@@ -5,15 +5,15 @@ export default function StaffOutsourcingPage() {
   return (
     <ServicePageTemplate
       title="Cleaning Staff Outsourcing"
-      subtitle="Vetted, trained cleaning personnel deployed to your site"
-      heroSubtext="We supply professional cleaning staff to work on your premises, under your supervision. Flexible contracts, zero recruitment stress."
+      subtitle="Vetted, trained cleaning personnel deployed to your organisation"
+      heroSubtext="We supply professional cleaning staff to businesses and organisations across Abuja. They work on your premises, under your supervision - flexible contracts, zero recruitment stress."
       icon={Users}
       whyItMatters={[
         "Recruiting, vetting and training in-house cleaning staff takes time and resources that many businesses prefer to direct elsewhere. Turnover in this role can also be high, creating operational gaps.",
         "Our staff outsourcing service removes that burden entirely. We supply trained, vetted personnel who are ready to work, while you retain full day-to-day supervision over how they operate.",
       ]}
       whatWeOffer={[
-        "Individual cleaners for residential or office deployment",
+        "Individual cleaners for offices and business premises",
         "Cleaning teams for larger facilities",
         "Short-term and long-term placement options",
         "Event and one-off staffing",
