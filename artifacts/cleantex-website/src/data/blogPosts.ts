@@ -17,7 +17,7 @@ export const blogPosts: BlogPost[] = [
     category: "Cleaning Tips",
     title: "How Often Should You Deep Clean Your Home in Abuja?",
     excerpt: "Abuja's dust and harmattan season can cause rapid buildup of allergens and grime. Here's a practical schedule to keep your home spotless year-round.",
-    date: "March 15, 2025",
+    date: "April 5, 2026",
     readTime: "4 min read",
     image: "/images/blog-deep-clean.jpg",
     content: `
@@ -67,7 +67,7 @@ Ready to book your deep clean? Chat with us on WhatsApp and we'll arrange a sche
     category: "Pest Control",
     title: "5 Warning Signs You Need Professional Fumigation Right Now",
     excerpt: "From unexplained droppings to strange odours, don't ignore these red flags. Catching a pest problem early saves you time, money and stress.",
-    date: "February 28, 2025",
+    date: "March 8, 2026",
     readTime: "5 min read",
     image: "/images/blog-fumigation.jpg",
     content: `
@@ -114,7 +114,7 @@ At Cleantex, we use safe, regulated products that are effective against all comm
     category: "Post-Construction",
     title: "Why Post-Construction Cleaning Is Essential Before Moving In",
     excerpt: "Cement dust, paint residue and construction debris are more harmful than they look. Discover why professional cleaning makes your new space truly ready.",
-    date: "January 20, 2025",
+    date: "February 12, 2026",
     readTime: "3 min read",
     image: "/images/blog-post-construction.jpg",
     content: `
@@ -168,7 +168,7 @@ Moving into a clean, truly ready space on day one makes all the difference. Cont
     category: "Carpet Care",
     title: "Protecting Your Carpets & Upholstery During Rainy Season",
     excerpt: "Nigeria's wet season brings mud, humidity and mould risk. Learn professional tips for keeping your fabrics fresh and mould-free all through the rains.",
-    date: "December 10, 2024",
+    date: "January 15, 2026",
     readTime: "4 min read",
     image: "/images/blog-carpet-cleaning.jpg",
     content: `
@@ -216,7 +216,7 @@ At Cleantex, we recommend a mid-season and end-of-season carpet and upholstery c
     category: "Office Cleaning",
     title: "The Business Case for a Clean Office: Productivity & First Impressions",
     excerpt: "Studies show a clean workspace boosts employee focus by up to 15%. Find out how regular professional cleaning can transform your Abuja office.",
-    date: "November 5, 2024",
+    date: "December 10, 2025",
     readTime: "5 min read",
     image: "https://images.unsplash.com/photo-1497366216548-37526070297c?q=80&w=2069&auto=format&fit=crop",
     content: `
@@ -266,7 +266,7 @@ Calculate the cost of a professional cleaning service against the value of even 
     category: "Laundry Tips",
     title: "How to Care for Heavy Curtains, Duvets & Household Linens",
     excerpt: "Bulky fabrics require special attention. Our laundry team shares professional techniques for cleaning large household items without damage.",
-    date: "October 18, 2024",
+    date: "November 7, 2025",
     readTime: "3 min read",
     image: "https://images.unsplash.com/photo-1582735689369-4fe89db7114c?q=80&w=2070&auto=format&fit=crop",
     content: `
