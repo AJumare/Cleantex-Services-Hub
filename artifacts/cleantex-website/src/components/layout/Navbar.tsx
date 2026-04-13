@@ -1,5 +1,5 @@
 import { useState, useEffect, useRef } from "react";
-import { Menu, X, MessageCircle, Mail, ChevronDown } from "lucide-react";
+import { Menu, X, MessageCircle, Mail, ChevronDown, Phone } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Link, useLocation } from "wouter";
 
@@ -144,6 +144,20 @@ export function Navbar() {
                       <div>
                         <p className="font-semibold text-sm text-foreground">Email Us</p>
                         <p className="text-xs text-muted-foreground">Send a message</p>
+                      </div>
+                    </a>
+                    <div className="border-t border-border" />
+                    <a
+                      href="tel:+2348064551684"
+                      onClick={() => setDropdownOpen(false)}
+                      className="flex items-center gap-3 px-5 py-4 hover:bg-accent/50 transition-colors"
+                    >
+                      <div className="w-8 h-8 rounded-full bg-blue-100 flex items-center justify-center">
+                        <Phone size={16} className="text-blue-600" />
+                      </div>
+                      <div>
+                        <p className="font-semibold text-sm text-foreground">Call Us</p>
+                        <p className="text-xs text-muted-foreground">08064551684</p>
                       </div>
                     </a>
                   </motion.div>
