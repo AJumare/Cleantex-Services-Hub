@@ -117,7 +117,7 @@ export default function BlogPostPage() {
         {/* WhatsApp CTA */}
         <div className="mt-14 p-8 rounded-3xl bg-primary text-white text-center">
           <h3 className="text-xl font-bold mb-2">Ready to book a service?</h3>
-          <p className="text-white/80 mb-6">Chat with the Cleantex team on WhatsApp — we respond fast.</p>
+          <p className="text-white/80 mb-6">Chat with the Cleantex team on WhatsApp - we respond fast.</p>
           <a
             href="https://wa.me/2348064551684"
             target="_blank"

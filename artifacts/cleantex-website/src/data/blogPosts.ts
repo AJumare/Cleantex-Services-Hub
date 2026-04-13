@@ -23,7 +23,7 @@ export const blogPosts: BlogPost[] = [
     content: `
 Living in Abuja comes with a unique set of environmental challenges. Between the harmattan dust that blankets the city from November to March, the red laterite soil that tracks in on shoes, and the humidity that builds through the rainy season, your home takes a beating year-round. 
 
-The question isn't whether to deep clean — it's how often.
+The question isn't whether to deep clean - it's how often.
 
 ## What Is a Deep Clean?
 
@@ -35,7 +35,7 @@ Unlike a regular tidy-up or surface wipe-down, a deep clean tackles areas that e
 During harmattan season (October–March), dust settles faster than you can imagine. We recommend professional deep cleaning at least once every 4–6 weeks during this period. Key focus areas include ceiling fans, air conditioning filters, window blinds, and upholstered furniture.
 
 **Quarterly (every 3 months)**
-Outside of harmattan, a thorough deep clean every three months keeps allergen levels down and prevents the buildup of mould and mildew — especially in bathrooms and kitchens where humidity is highest.
+Outside of harmattan, a thorough deep clean every three months keeps allergen levels down and prevents the buildup of mould and mildew - especially in bathrooms and kitchens where humidity is highest.
 
 **Annually (at minimum)**
 Even the most diligent homeowner benefits from a full annual deep clean that includes carpet steam cleaning, professional upholstery treatment, and deep kitchen appliance cleaning.
@@ -52,7 +52,7 @@ Even the most diligent homeowner benefits from a full annual deep clean that inc
 
 DIY cleaning, even when done well, rarely reaches the same standard as a professional service. Professional cleaners use industrial-grade equipment, steam technology, and specialised products that are safe for your family but powerful enough to eliminate bacteria, dust mites, and deeply embedded grime.
 
-At Cleantex, our trained teams follow a room-by-room checklist that ensures nothing is missed — from the top of your kitchen cabinets to the underside of your sofa cushions.
+At Cleantex, our trained teams follow a room-by-room checklist that ensures nothing is missed - from the top of your kitchen cabinets to the underside of your sofa cushions.
 
 ## A Clean Home Is a Healthy Home
 
@@ -71,19 +71,19 @@ Ready to book your deep clean? Chat with us on WhatsApp and we'll arrange a sche
     readTime: "5 min read",
     image: "/images/blog-fumigation.jpg",
     content: `
-Pests are masters of concealment. By the time most homeowners realise they have a problem, the infestation is already well-established. In Abuja's warm climate, cockroaches, rodents, termites, and mosquitoes can multiply rapidly — and the damage they cause can be significant.
+Pests are masters of concealment. By the time most homeowners realise they have a problem, the infestation is already well-established. In Abuja's warm climate, cockroaches, rodents, termites, and mosquitoes can multiply rapidly - and the damage they cause can be significant.
 
 Here are five warning signs that you should stop Googling and call a professional fumigation company right now.
 
 ## 1. You're Seeing Droppings
 
-Rodent droppings are small, dark, and pellet-shaped. Cockroach droppings look like black pepper or coffee grounds. Finding these in kitchen drawers, behind appliances, or in cupboards is a clear signal that pests are active in your space — and likely breeding.
+Rodent droppings are small, dark, and pellet-shaped. Cockroach droppings look like black pepper or coffee grounds. Finding these in kitchen drawers, behind appliances, or in cupboards is a clear signal that pests are active in your space - and likely breeding.
 
 Don't just clean them up and hope for the best. Where there are droppings, there are more pests than you're seeing.
 
 ## 2. You Hear Scratching or Scurrying at Night
 
-Rodents are nocturnal. If you hear unexplained scratching, scurrying, or gnawing sounds from inside walls, ceilings, or underneath floorboards after dark, you almost certainly have rats or mice. These animals can chew through electrical wiring — creating a serious fire hazard — as well as insulation, pipes, and food packaging.
+Rodents are nocturnal. If you hear unexplained scratching, scurrying, or gnawing sounds from inside walls, ceilings, or underneath floorboards after dark, you almost certainly have rats or mice. These animals can chew through electrical wiring - creating a serious fire hazard - as well as insulation, pipes, and food packaging.
 
 ## 3. You Notice Structural Damage or Wood Dust
 
@@ -101,11 +101,11 @@ Cockroaches shed their exoskeletons as they grow and leave behind brown, oval eg
 
 ## What to Do Next
 
-Don't attempt to manage a serious infestation with off-the-shelf sprays. Consumer pesticides often push pests deeper into hiding rather than eliminating them — and many are not safe for children or pets when misapplied.
+Don't attempt to manage a serious infestation with off-the-shelf sprays. Consumer pesticides often push pests deeper into hiding rather than eliminating them - and many are not safe for children or pets when misapplied.
 
 A professional fumigation team will identify the species, locate entry points, treat the infestation at its source, and provide guidance on preventing re-entry.
 
-At Cleantex, we use safe, regulated products that are effective against all common Abuja pests while being safe for your household. Contact us today — the sooner you act, the easier (and cheaper) the problem is to solve.
+At Cleantex, we use safe, regulated products that are effective against all common Abuja pests while being safe for your household. Contact us today - the sooner you act, the easier (and cheaper) the problem is to solve.
     `.trim(),
   },
   {
@@ -118,7 +118,7 @@ At Cleantex, we use safe, regulated products that are effective against all comm
     readTime: "3 min read",
     image: "/images/blog-post-construction.jpg",
     content: `
-Finishing construction or renovation on a property is an exciting milestone. But before you move furniture in and start living, there's a critical step that many property owners overlook — or underestimate: professional post-construction cleaning.
+Finishing construction or renovation on a property is an exciting milestone. But before you move furniture in and start living, there's a critical step that many property owners overlook - or underestimate: professional post-construction cleaning.
 
 This isn't just about sweeping up sawdust. Here's why it matters.
 
@@ -141,7 +141,7 @@ Paint fumes and chemical off-gassing also continue for days or weeks after const
 
 ## Why DIY Isn't Enough
 
-Most people don't have access to the right tools — HEPA-filter vacuums, industrial floor scrubbers, or the specialised cleaning agents needed to remove paint from tiles and glass without scratching them.
+Most people don't have access to the right tools - HEPA-filter vacuums, industrial floor scrubbers, or the specialised cleaning agents needed to remove paint from tiles and glass without scratching them.
 
 Amateur cleaning also risks pushing fine dust around rather than removing it, and can damage new surfaces if the wrong products are used on tile grout, marble, or aluminium fittings.
 
@@ -152,12 +152,12 @@ At Cleantex, our post-construction service follows a top-to-bottom approach:
 1. **Dust removal** from ceilings, light fixtures, and air vents before any floor work begins
 2. **Window and glass cleaning** to remove paint, sticker residue, and construction film
 3. **Floor scrubbing** including grout lines and transition strips
-4. **Fixture and fitting cleaning** — sinks, taps, bathroom fittings, and kitchen surfaces
+4. **Fixture and fitting cleaning** - sinks, taps, bathroom fittings, and kitchen surfaces
 5. **Final vacuum and polish** throughout the entire space
 
 ## When to Book
 
-The best time to schedule post-construction cleaning is after all trades have finished — painters, tilers, electricians — but before furniture arrives. This gives our team unrestricted access to every surface.
+The best time to schedule post-construction cleaning is after all trades have finished - painters, tilers, electricians - but before furniture arrives. This gives our team unrestricted access to every surface.
 
 Moving into a clean, truly ready space on day one makes all the difference. Contact us to book your post-construction clean in Abuja.
     `.trim(),
@@ -178,11 +178,11 @@ Mud, moisture, and increased humidity create the perfect conditions for mould, m
 
 ## The Rainy Season Threats to Fabric
 
-**Mud and dirt tracked inside** — with wet ground outside, shoes bring in much more soil than during dry months. This grinds into carpet fibres and, if left, becomes very difficult to remove.
+**Mud and dirt tracked inside** - with wet ground outside, shoes bring in much more soil than during dry months. This grinds into carpet fibres and, if left, becomes very difficult to remove.
 
-**Elevated humidity** — Abuja's humidity can spike significantly during the rains, creating conditions where moisture gets absorbed into fabric. Over time, this leads to mould growth deep within carpet padding or sofa foam — often before you even notice a smell.
+**Elevated humidity** - Abuja's humidity can spike significantly during the rains, creating conditions where moisture gets absorbed into fabric. Over time, this leads to mould growth deep within carpet padding or sofa foam - often before you even notice a smell.
 
-**Wet shoes and pets** — moisture transferred from wet footwear or animals sitting on upholstered furniture is another major contributor to fabric deterioration.
+**Wet shoes and pets** - moisture transferred from wet footwear or animals sitting on upholstered furniture is another major contributor to fabric deterioration.
 
 ## Practical Prevention Tips
 
@@ -192,7 +192,7 @@ Mud, moisture, and increased humidity create the perfect conditions for mould, m
 
 **Increase ventilation.** Open windows during dry spells and use ceiling fans to keep air moving through the house. Stagnant humid air is mould's best friend.
 
-**Act fast on spills and wet patches.** If water gets onto a carpet or sofa, blot it dry immediately — never rub. Place a dry towel over the area and apply pressure. If the dampness is significant, use a fan to dry the area thoroughly.
+**Act fast on spills and wet patches.** If water gets onto a carpet or sofa, blot it dry immediately - never rub. Place a dry towel over the area and apply pressure. If the dampness is significant, use a fan to dry the area thoroughly.
 
 **Vacuum more frequently.** During the rainy season, vacuum carpets at least twice a week to remove the increased volume of soil being tracked in.
 
@@ -220,7 +220,7 @@ At Cleantex, we recommend a mid-season and end-of-season carpet and upholstery c
     readTime: "5 min read",
     image: "https://images.unsplash.com/photo-1497366216548-37526070297c?q=80&w=2069&auto=format&fit=crop",
     content: `
-Your office says something about your business before anyone in your team speaks a word. For clients visiting for the first time, for new hires forming their first impressions, and for your existing staff day after day — the cleanliness and condition of your workspace sends a message.
+Your office says something about your business before anyone in your team speaks a word. For clients visiting for the first time, for new hires forming their first impressions, and for your existing staff day after day - the cleanliness and condition of your workspace sends a message.
 
 That message can either build confidence, or quietly erode it.
 
@@ -232,7 +232,7 @@ Separate research on cognitive load found that cluttered, dirty environments inc
 
 ## First Impressions Are Lasting Impressions
 
-In Abuja's competitive business environment, every client meeting is an opportunity. An office that smells fresh, has clean windows, spotless floors, and well-maintained washrooms communicates professionalism and attention to detail — qualities that transfer in a client's mind to how you run your business.
+In Abuja's competitive business environment, every client meeting is an opportunity. An office that smells fresh, has clean windows, spotless floors, and well-maintained washrooms communicates professionalism and attention to detail - qualities that transfer in a client's mind to how you run your business.
 
 An unkempt office does the opposite. Studies in consumer psychology show that people form lasting impressions within seconds of entering a space, and those impressions are very difficult to reverse.
 
@@ -240,7 +240,7 @@ An unkempt office does the opposite. Studies in consumer psychology show that pe
 
 Your team spends 8 or more hours a day in your office. The quality of that environment directly impacts their mood, energy levels, and sense of respect from their employer. Companies that invest in clean, well-maintained workspaces consistently report higher staff satisfaction scores and lower turnover.
 
-There's also the practical matter of illness. Shared surfaces — keyboards, door handles, kitchen equipment, phones — are primary vectors for the transmission of respiratory infections. Regular professional cleaning and sanitisation of these areas significantly reduces the spread of illness through your team.
+There's also the practical matter of illness. Shared surfaces - keyboards, door handles, kitchen equipment, phones - are primary vectors for the transmission of respiratory infections. Regular professional cleaning and sanitisation of these areas significantly reduces the spread of illness through your team.
 
 ## What Professional Office Cleaning Covers
 
@@ -253,7 +253,7 @@ Surface cleaning and tidying by office staff (or even a basic cleaning service) 
 - Carpet and upholstery (meeting room chairs, reception sofas)
 - Under desks and behind furniture
 
-At Cleantex, we offer scheduled office cleaning packages tailored to your business size and operating hours — so cleaning happens around your team, not in spite of them.
+At Cleantex, we offer scheduled office cleaning packages tailored to your business size and operating hours - so cleaning happens around your team, not in spite of them.
 
 ## The ROI of a Clean Office
 
@@ -270,15 +270,15 @@ Calculate the cost of a professional cleaning service against the value of even 
     readTime: "3 min read",
     image: "https://images.unsplash.com/photo-1582735689369-4fe89db7114c?q=80&w=2070&auto=format&fit=crop",
     content: `
-Heavy curtains, thick duvets, and large household linens are the items most homeowners dread dealing with. Too bulky for a standard home washing machine, too delicate for rough handling, and too large to dry properly without specialist equipment — these items often go far longer without proper cleaning than they should.
+Heavy curtains, thick duvets, and large household linens are the items most homeowners dread dealing with. Too bulky for a standard home washing machine, too delicate for rough handling, and too large to dry properly without specialist equipment - these items often go far longer without proper cleaning than they should.
 
 Here's what you need to know about caring for your home's large fabric items.
 
 ## Why Heavy Fabrics Need Special Care
 
-A pair of lined curtains can easily weigh 3–5kg when wet. Most domestic washing machines are not designed to agitate and rinse fabric at this weight effectively — which means residual detergent, soil, and moisture can remain trapped in the fabric even after a wash cycle.
+A pair of lined curtains can easily weigh 3–5kg when wet. Most domestic washing machines are not designed to agitate and rinse fabric at this weight effectively - which means residual detergent, soil, and moisture can remain trapped in the fabric even after a wash cycle.
 
-Duvets present a different problem: the filling (whether polyester, microfibre, or natural down) must be agitated thoroughly during washing and — critically — dried completely to prevent mould growth within the filling itself. A duvet that feels dry on the outside can still harbour moisture deep inside, leading to musty smells and mould spores over time.
+Duvets present a different problem: the filling (whether polyester, microfibre, or natural down) must be agitated thoroughly during washing and - critically - dried completely to prevent mould growth within the filling itself. A duvet that feels dry on the outside can still harbour moisture deep inside, leading to musty smells and mould spores over time.
 
 ## How Often Should These Items Be Cleaned?
 
@@ -294,7 +294,7 @@ Duvets present a different problem: the filling (whether polyester, microfibre, 
 
 **Overstuffing the machine.** A duvet shoved tightly into a machine that's too small will come out with patches that were never properly cleaned or rinsed.
 
-**Under-drying.** This is the most common — and most damaging — mistake. Always ensure heavy items are completely dry before storing or putting back into use.
+**Under-drying.** This is the most common - and most damaging - mistake. Always ensure heavy items are completely dry before storing or putting back into use.
 
 **Ignoring care labels.** Blackout curtains, silk blends, wool-filled duvets, and embroidered linens all have specific requirements. Washing them incorrectly can cause shrinkage, colour bleed, or permanent damage to the fabric structure.
 
@@ -302,7 +302,7 @@ Duvets present a different problem: the filling (whether polyester, microfibre, 
 
 ## The Professional Advantage
 
-At Cleantex, we use large-capacity commercial washers and industrial dryers that handle heavy fabrics correctly — full agitation, proper rinsing, and thorough drying at controlled temperatures. We also pre-treat stains and check care labels on every item before washing.
+At Cleantex, we use large-capacity commercial washers and industrial dryers that handle heavy fabrics correctly - full agitation, proper rinsing, and thorough drying at controlled temperatures. We also pre-treat stains and check care labels on every item before washing.
 
 Your curtains come back fresh, your duvets come back fully dry and fluffy, and your linens come back sanitised and professionally pressed.
 

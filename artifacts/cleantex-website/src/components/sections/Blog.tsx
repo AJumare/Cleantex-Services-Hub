@@ -25,7 +25,7 @@ export function Blog() {
             Our Blog
           </h3>
           <p className="text-lg text-muted-foreground">
-            Expert advice on cleaning, pest control, and maintaining a healthy environment — straight from the Cleantex team.
+            Expert advice on cleaning, pest control, and maintaining a healthy environment - straight from the Cleantex team.
           </p>
         </div>
 

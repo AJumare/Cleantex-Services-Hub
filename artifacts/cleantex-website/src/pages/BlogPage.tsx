@@ -31,7 +31,7 @@ export default function BlogPage() {
             Insights & Tips
           </h1>
           <p className="text-white/70 text-lg max-w-2xl">
-            Expert advice on cleaning, pest control, and maintaining a healthy environment — straight from the Cleantex team.
+            Expert advice on cleaning, pest control, and maintaining a healthy environment - straight from the Cleantex team.
           </p>
         </div>
       </section>

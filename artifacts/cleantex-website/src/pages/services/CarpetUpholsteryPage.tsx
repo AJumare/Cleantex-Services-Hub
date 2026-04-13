@@ -17,7 +17,7 @@ const whatWeClean = [
 ];
 
 const whatYouGet = [
-  "Deep cleaning — not just surface washing",
+  "Deep cleaning - not just surface washing",
   "Steam cleaning available as an add-on",
   "Stain treatment for tough spots",
   "Odour removal",
@@ -81,7 +81,7 @@ export default function CarpetUpholsteryPage() {
                 Carpet & Upholstery<br className="hidden md:block" /> Cleaning
               </h1>
               <p className="text-xl text-primary-foreground/80 max-w-2xl mb-10">
-                Deep cleaning for carpets, sofas, chairs and fabric surfaces. We remove stains, odours and hidden dirt — leaving your space fresh, clean and hygienic.
+                Deep cleaning for carpets, sofas, chairs and fabric surfaces. We remove stains, odours and hidden dirt - leaving your space fresh, clean and hygienic.
               </p>
               <div className="flex flex-wrap gap-4">
                 <a href={WA_LINK} target="_blank" rel="noopener noreferrer"
@@ -109,10 +109,10 @@ export default function CarpetUpholsteryPage() {
               </h3>
               <div className="space-y-5 text-lg text-muted-foreground leading-relaxed">
                 <p>
-                  Your carpets and furniture trap dust, bacteria and odours over time — even when they look clean on the surface. In Abuja's climate, harmattan dust and humidity accelerate this build-up significantly.
+                  Your carpets and furniture trap dust, bacteria and odours over time - even when they look clean on the surface. In Abuja's climate, harmattan dust and humidity accelerate this build-up significantly.
                 </p>
                 <p>
-                  At Cleantex, we go beyond surface cleaning. Our process penetrates deep into the fabric to remove what regular cleaning leaves behind — restoring hygiene, brightness and freshness to your space.
+                  At Cleantex, we go beyond surface cleaning. Our process penetrates deep into the fabric to remove what regular cleaning leaves behind - restoring hygiene, brightness and freshness to your space.
                 </p>
               </div>
             </motion.div>

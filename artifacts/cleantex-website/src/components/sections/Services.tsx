@@ -45,7 +45,7 @@ const services = [
   {
     id: 6,
     title: "Residential Cleaning",
-    description: "Regular cleaning schedules for homes — daily, weekly or monthly. We keep your personal space consistently spotless.",
+    description: "Regular cleaning schedules for homes - daily, weekly or monthly. We keep your personal space consistently spotless.",
     icon: Home,
     waLink: waBase + encodeURIComponent("Hello Cleantex! I'm interested in your Residential Cleaning service. Please share more details."),
   },

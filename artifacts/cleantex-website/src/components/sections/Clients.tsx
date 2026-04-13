@@ -47,7 +47,7 @@ export function Clients() {
             Leading Organisations Rely on Cleantex
           </h3>
           <p className="text-muted-foreground text-base max-w-xl mx-auto">
-            From federal institutions to private enterprises — top organisations across Abuja trust us to keep their environments clean, safe, and professional. The logos below represent just a few of our past and present clients.
+            From federal institutions to private enterprises - top organisations across Abuja trust us to keep their environments clean, safe, and professional. The logos below represent just a few of our past and present clients.
           </p>
         </motion.div>
 

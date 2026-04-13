@@ -22,7 +22,7 @@ export function About() {
               Cleantex Environmental Services Limited is a leading cleaning and pest control company based in Abuja, Nigeria and a proudly second-generation business. Founded in 2000 by our founder, Cleantex was built on a simple belief: that every home and workplace deserves to be truly clean. Today, under new leadership, we carry that founding commitment forward with even greater expertise, expanded services, and a team that treats every client's space as our own.
             </p>
             <p>
-              We are dedicated to providing top-tier cleaning, fumigation, and environmental services to residential and commercial clients across the Federal Capital Territory. Our mission is to create healthier, cleaner, and pest-free environments through professional expertise, high-quality products, and reliable service delivery — because we know that a clean space is fundamental to well-being and productivity.
+              We are dedicated to providing top-tier cleaning, fumigation, and environmental services to residential and commercial clients across the Federal Capital Territory. Our mission is to create healthier, cleaner, and pest-free environments through professional expertise, high-quality products, and reliable service delivery - because we know that a clean space is fundamental to well-being and productivity.
             </p>
             <p>
               Twenty-five years in, that belief hasn't changed. Only our capabilities have grown.
