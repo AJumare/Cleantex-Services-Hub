@@ -16,12 +16,12 @@ export default function Home() {
       <Navbar />
       <main>
         <Hero />
-        <Clients />
         <Services />
         <WhyChooseUs />
         <About />
         <Testimonials />
         <InstagramReels />
+        <Clients />
         <Blog />
         <Contact />
       </main>
