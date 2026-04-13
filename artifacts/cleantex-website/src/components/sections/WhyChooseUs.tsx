@@ -3,12 +3,17 @@ import { Users, Leaf, Clock, BadgeCheck, ChevronLeft, ChevronRight } from "lucid
 import { useState, useEffect, useCallback } from "react";
 
 const carouselImages = [
-  { src: "/images/work-1.jpg", alt: "Cleantex team cleaning exterior" },
-  { src: "/images/work-2.jpg", alt: "Cleantex team cleaning window" },
-  { src: "/images/work-3.jpg", alt: "Cleantex team deep cleaning" },
-  { src: "/images/work-4.jpg", alt: "Carpet before and after cleaning" },
-  { src: "/images/work-5.jpg", alt: "Chair upholstery before and after" },
-  { src: "/images/work-6.jpg", alt: "Sofa before and after cleaning" },
+  { src: "/images/carousel-1.jpg", alt: "Cleantex technician cleaning light fixture" },
+  { src: "/images/carousel-2.jpg", alt: "Cleantex team cleaning large carpet" },
+  { src: "/images/carousel-3.jpg", alt: "Carpet before and after deep cleaning" },
+  { src: "/images/carousel-4.jpg", alt: "Cleantex technician servicing air conditioning unit" },
+  { src: "/images/carousel-5.jpg", alt: "Cleantex technician cleaning sofa upholstery" },
+  { src: "/images/carousel-6.jpg", alt: "Cleantex technician cleaning ceiling lights" },
+  { src: "/images/carousel-7.jpg", alt: "Kitchen surface before and after cleaning" },
+  { src: "/images/carousel-8.jpg", alt: "Cleantex technician cleaning sofa with machine" },
+  { src: "/images/carousel-9.jpg", alt: "Cleantex fumigation technician fogging" },
+  { src: "/images/carousel-10.jpg", alt: "Carpet deep cleaning with brush machine" },
+  { src: "/images/carousel-11.jpg", alt: "Cleantex pest control technician with sprayer" },
 ];
 
 const reasons = [
