@@ -19,6 +19,7 @@ const services = [
     title: "Deep Cleaning",
     description: "Thorough top-to-bottom cleaning of homes, offices and commercial spaces. We leave no corner untouched.",
     icon: SprayCan,
+    slug: "/services/deep-cleaning",
     waLink: waBase + encodeURIComponent("Hello Cleantex! I'm interested in your Deep Cleaning service. Please share more details."),
   },
   {
@@ -26,6 +27,7 @@ const services = [
     title: "Fumigation & Pest Control",
     description: "Effective elimination of cockroaches, rodents, termites, mosquitoes, and all pests. Safe for families and pets.",
     icon: Bug,
+    slug: "/services/fumigation-pest-control",
     waLink: waBase + encodeURIComponent("Hello Cleantex! I'm interested in your Fumigation & Pest Control service. Please share more details."),
   },
   {
@@ -33,6 +35,7 @@ const services = [
     title: "Post-Construction",
     description: "Removal of construction dust, debris and waste. We prepare your newly built or renovated space for immediate use.",
     icon: HardHat,
+    slug: "/services/post-construction",
     waLink: waBase + encodeURIComponent("Hello Cleantex! I'm interested in your Post-Construction cleaning service. Please share more details."),
   },
   {
@@ -40,6 +43,7 @@ const services = [
     title: "Laundry Services",
     description: "Professional washing, drying, ironing and folding of clothes, curtains, linens and more with premium care.",
     icon: Shirt,
+    slug: "/services/laundry",
     waLink: waBase + encodeURIComponent("Hello Cleantex! I'm interested in your Laundry Services. Please share more details."),
   },
   {
@@ -47,6 +51,7 @@ const services = [
     title: "Residential Cleaning",
     description: "Regular cleaning schedules for homes - daily, weekly or monthly. We keep your personal space consistently spotless.",
     icon: Home,
+    slug: "/services/residential-cleaning",
     waLink: waBase + encodeURIComponent("Hello Cleantex! I'm interested in your Residential Cleaning service. Please share more details."),
   },
   {
@@ -54,6 +59,7 @@ const services = [
     title: "Janitorial Services",
     description: "Managed cleaning for offices, commercial spaces, and facilities. Regular schedules, trained teams, all supplies included.",
     icon: Building2,
+    slug: "/services/janitorial",
     waLink: waBase + encodeURIComponent("Hello Cleantex! I'm interested in your Janitorial Services. Please share more details."),
   },
   {
@@ -61,6 +67,7 @@ const services = [
     title: "Cleaning Staff Outsourcing",
     description: "Vetted, trained cleaning personnel deployed to your site under your supervision. Flexible contracts, zero recruitment stress.",
     icon: Users,
+    slug: "/services/cleaning-staff-outsourcing",
     waLink: waBase + encodeURIComponent("Hello Cleantex! I'm interested in your Cleaning Staff Outsourcing service. Please share more details."),
   },
   {
