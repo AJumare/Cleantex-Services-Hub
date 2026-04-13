@@ -8,6 +8,7 @@ import NotFound from "@/pages/not-found";
 import Home from "@/pages/Home";
 import BlogPage from "@/pages/BlogPage";
 import BlogPostPage from "@/pages/BlogPostPage";
+import CarpetUpholsteryPage from "@/pages/services/CarpetUpholsteryPage";
 
 const queryClient = new QueryClient();
 
@@ -27,6 +28,7 @@ function Router() {
         <Route path="/" component={Home} />
         <Route path="/blog" component={BlogPage} />
         <Route path="/blog/:slug" component={BlogPostPage} />
+        <Route path="/services/carpet-upholstery" component={CarpetUpholsteryPage} />
         <Route component={NotFound} />
       </Switch>
     </>

@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import { Link } from "wouter";
 import { Sparkles, Bug, HardHat, Shirt, Home, SprayCan, Building2, Users, HelpCircle } from "lucide-react";
 
 const waBase = "https://wa.me/2348064551684?text=";
@@ -10,6 +11,7 @@ const services = [
     description: "Deep steam cleaning of carpets, sofas, chairs and fabric surfaces. Removes stains, allergens and odours.",
     icon: Sparkles,
     popular: true,
+    slug: "/services/carpet-upholstery",
     waLink: waBase + encodeURIComponent("Hello Cleantex! I'm interested in your Carpet & Upholstery cleaning service. Please share more details."),
   },
   {
@@ -141,17 +143,29 @@ export function Services() {
                 {service.description}
               </p>
               
-              <a
-                href={service.waLink}
-                target="_blank"
-                rel="noopener noreferrer"
-                className={`mt-6 inline-flex items-center font-semibold text-sm transition-all ${
-                  service.popular ? "text-white/90 hover:text-white" : "text-primary hover:text-primary/80"
-                }`}
-              >
-                <span>Learn more</span>
-                <ArrowRight size={16} className="ml-1 opacity-0 -translate-x-2 group-hover:opacity-100 group-hover:translate-x-0 transition-all" />
-              </a>
+              {"slug" in service && service.slug ? (
+                <Link
+                  href={service.slug}
+                  className={`mt-6 inline-flex items-center font-semibold text-sm transition-all ${
+                    service.popular ? "text-white/90 hover:text-white" : "text-primary hover:text-primary/80"
+                  }`}
+                >
+                  <span>Learn more</span>
+                  <ArrowRight size={16} className="ml-1 opacity-0 -translate-x-2 group-hover:opacity-100 group-hover:translate-x-0 transition-all" />
+                </Link>
+              ) : (
+                <a
+                  href={service.waLink}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className={`mt-6 inline-flex items-center font-semibold text-sm transition-all ${
+                    service.popular ? "text-white/90 hover:text-white" : "text-primary hover:text-primary/80"
+                  }`}
+                >
+                  <span>Learn more</span>
+                  <ArrowRight size={16} className="ml-1 opacity-0 -translate-x-2 group-hover:opacity-100 group-hover:translate-x-0 transition-all" />
+                </a>
+              )}
             </motion.div>
           ))}
         </motion.div>
