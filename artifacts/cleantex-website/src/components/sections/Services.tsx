@@ -8,7 +8,7 @@ const services = [
   {
     id: 1,
     title: "Carpet & Upholstery",
-    description: "Deep steam cleaning of carpets, sofas, chairs and fabric surfaces. Removes stains, allergens and odours.",
+    description: "Deep cleaning of carpets, sofas, chairs and fabric surfaces. Removes stains, allergens and odours.",
     icon: Sparkles,
     popular: true,
     slug: "/services/carpet-upholstery",

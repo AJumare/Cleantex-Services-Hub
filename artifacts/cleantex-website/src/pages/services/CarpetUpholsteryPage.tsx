@@ -17,7 +17,8 @@ const whatWeClean = [
 ];
 
 const whatYouGet = [
-  "Deep steam cleaning — not just surface washing",
+  "Deep cleaning — not just surface washing",
+  "Steam cleaning available as an add-on",
   "Stain treatment for tough spots",
   "Odour removal",
   "Allergen reduction",
@@ -80,7 +81,7 @@ export default function CarpetUpholsteryPage() {
                 Carpet & Upholstery<br className="hidden md:block" /> Cleaning
               </h1>
               <p className="text-xl text-primary-foreground/80 max-w-2xl mb-10">
-                Deep steam cleaning for carpets, sofas, chairs and fabric surfaces. We remove stains, odours and hidden dirt — leaving your space fresh, clean and hygienic.
+                Deep cleaning for carpets, sofas, chairs and fabric surfaces. We remove stains, odours and hidden dirt — leaving your space fresh, clean and hygienic.
               </p>
               <div className="flex flex-wrap gap-4">
                 <a href={WA_LINK} target="_blank" rel="noopener noreferrer"
