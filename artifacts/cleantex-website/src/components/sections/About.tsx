@@ -12,7 +12,7 @@ export function About() {
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
         >
-          <h2 className="text-accent font-bold tracking-widest uppercase text-sm mb-3">About Us</h2>
+          <h2 className="text-accent font-bold tracking-widest uppercase text-sm mb-3">Our Story</h2>
           <h3 className="text-4xl md:text-5xl font-display font-extrabold mb-10">
             About Cleantex Environmental Services
           </h3>
