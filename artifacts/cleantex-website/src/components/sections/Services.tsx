@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { Sparkles, Bug, HardHat, Shirt, Home, SprayCan, Building2, Users } from "lucide-react";
+import { Sparkles, Bug, HardHat, Shirt, Home, SprayCan, Building2, Users, HelpCircle } from "lucide-react";
 
 const waBase = "https://wa.me/2348064551684?text=";
 
@@ -60,6 +60,13 @@ const services = [
     description: "Vetted, trained cleaning personnel deployed to your site under your supervision. Flexible contracts, zero recruitment stress.",
     icon: Users,
     waLink: waBase + encodeURIComponent("Hello Cleantex! I'm interested in your Cleaning Staff Outsourcing service. Please share more details."),
+  },
+  {
+    id: 9,
+    title: "Other Cleaning Services",
+    description: "Don't see what you need? We handle a wide range of cleaning and hygiene needs beyond what's listed here. Reach out and we'll put together a solution for you.",
+    icon: HelpCircle,
+    waLink: waBase + encodeURIComponent("Hello Cleantex! I have a specific cleaning requirement I'd like to discuss with you. Please get in touch."),
   },
 ];
 
