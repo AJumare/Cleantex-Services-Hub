@@ -51,8 +51,8 @@ export function Navbar() {
     }
   };
 
-  const linkClass = "text-sm font-medium text-foreground/80 hover:text-primary transition-colors relative group";
-  const mobileLinkClass = "px-4 py-2 text-base font-medium text-foreground hover:bg-accent hover:text-primary rounded-lg transition-colors";
+  const linkClass = "text-sm font-bold text-foreground/80 hover:text-primary transition-colors relative group";
+  const mobileLinkClass = "px-4 py-2 text-base font-bold text-foreground hover:bg-accent hover:text-primary rounded-lg transition-colors";
 
   return (
     <nav
