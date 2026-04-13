@@ -43,9 +43,12 @@ export function Clients() {
           className="text-center mb-10"
         >
           <p className="text-sm font-bold tracking-widest uppercase text-muted-foreground mb-2">Trusted By</p>
-          <h3 className="text-2xl md:text-3xl font-display font-extrabold text-foreground">
-            Organisations That Trust Cleantex
+          <h3 className="text-2xl md:text-3xl font-display font-extrabold text-foreground mb-3">
+            Leading Organisations Rely on Cleantex
           </h3>
+          <p className="text-muted-foreground text-base max-w-xl mx-auto">
+            From federal institutions to private enterprises — top organisations across Abuja trust us to keep their environments clean, safe, and professional.
+          </p>
         </motion.div>
 
         <motion.div
