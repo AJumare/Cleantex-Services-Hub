@@ -110,12 +110,18 @@ export function Services() {
             <motion.div
               key={service.id}
               variants={item}
-              className={`rounded-3xl p-8 border transition-all duration-300 group relative overflow-hidden ${
+              className={`rounded-3xl p-8 border transition-all duration-300 group relative overflow-hidden cursor-pointer ${
                 service.popular
                   ? "bg-primary border-primary shadow-2xl shadow-primary/30 scale-105 hover:shadow-3xl hover:-translate-y-1"
                   : "bg-background border-border shadow-sm hover:shadow-xl hover:border-primary/30"
               }`}
             >
+              {"slug" in service && service.slug ? (
+                <Link href={service.slug} className="absolute inset-0 z-10" aria-label={`Learn more about ${service.title}`} />
+              ) : (
+                <a href={service.waLink} target="_blank" rel="noopener noreferrer" className="absolute inset-0 z-10" aria-label={`Enquire about ${service.title}`} />
+              )}
+
               {service.popular && (
                 <div className="absolute top-5 right-5">
                   <span className="inline-flex items-center gap-1 px-3 py-1 rounded-full bg-white/20 text-white text-xs font-bold tracking-wide uppercase backdrop-blur-sm">
@@ -142,30 +148,13 @@ export function Services() {
               <p className={`leading-relaxed ${service.popular ? "text-white/80" : "text-muted-foreground"}`}>
                 {service.description}
               </p>
-              
-              {"slug" in service && service.slug ? (
-                <Link
-                  href={service.slug}
-                  className={`mt-6 inline-flex items-center font-semibold text-sm transition-all ${
-                    service.popular ? "text-white/90 hover:text-white" : "text-primary hover:text-primary/80"
-                  }`}
-                >
-                  <span>Learn more</span>
-                  <ArrowRight size={16} className="ml-1 opacity-0 -translate-x-2 group-hover:opacity-100 group-hover:translate-x-0 transition-all" />
-                </Link>
-              ) : (
-                <a
-                  href={service.waLink}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className={`mt-6 inline-flex items-center font-semibold text-sm transition-all ${
-                    service.popular ? "text-white/90 hover:text-white" : "text-primary hover:text-primary/80"
-                  }`}
-                >
-                  <span>Learn more</span>
-                  <ArrowRight size={16} className="ml-1 opacity-0 -translate-x-2 group-hover:opacity-100 group-hover:translate-x-0 transition-all" />
-                </a>
-              )}
+
+              <div className={`mt-6 inline-flex items-center font-semibold text-sm ${
+                service.popular ? "text-white/90" : "text-primary"
+              }`}>
+                <span>Learn more</span>
+                <ArrowRight size={16} className="ml-1 opacity-0 -translate-x-2 group-hover:opacity-100 group-hover:translate-x-0 transition-all" />
+              </div>
             </motion.div>
           ))}
         </motion.div>
