@@ -29,18 +29,23 @@ export function Contact() {
     resolver: zodResolver(formSchema),
   });
 
-  const onSubmit = async (data: FormValues) => {
+  const onSubmit = (data: FormValues) => {
     setIsSubmitting(true);
-    // Simulate API call
-    await new Promise((resolve) => setTimeout(resolve, 1000));
-    
-    console.log("Form submitted:", data);
-    
+
+    const subject = encodeURIComponent(
+      `Quote Request - ${data.service} | ${data.name}`
+    );
+    const body = encodeURIComponent(
+      `Name: ${data.name}\nEmail: ${data.email}\nPhone: ${data.phone}\nService: ${data.service}\n\nMessage:\n${data.message}`
+    );
+
+    window.location.href = `mailto:cleantexnigeria@gmail.com?subject=${subject}&body=${body}`;
+
     toast({
-      title: "Message Sent Successfully!",
-      description: "We'll get back to you with a quote shortly.",
+      title: "Opening your email app...",
+      description: "Your message is pre-filled. Just hit send to reach us.",
     });
-    
+
     reset();
     setIsSubmitting(false);
   };
