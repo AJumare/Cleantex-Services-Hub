@@ -44,7 +44,7 @@ export function Clients() {
         >
           <p className="text-sm font-bold tracking-widest uppercase text-muted-foreground mb-2">Trusted By</p>
           <h3 className="text-2xl md:text-3xl font-display font-extrabold text-foreground mb-3">
-            Organisations That Have Worked With Cleantex
+            Clients We've Partnered With
           </h3>
           <p className="text-muted-foreground text-base max-w-xl mx-auto">
             From federal institutions to private enterprises - top organisations across Abuja trust us to keep their environments clean, safe, and professional. The logos below represent just a few of our past and present clients.
