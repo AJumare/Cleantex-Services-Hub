@@ -43,8 +43,8 @@ export default function FumigationPage() {
       ]}
       beforeAfter={{
         carousel: [
-          { src: `${import.meta.env.BASE_URL}images/fumigation-spray-1.jpg`, alt: "Cleantex technician carrying fumigation equipment" },
           { src: `${import.meta.env.BASE_URL}images/fumigation-fogger.jpg`, alt: "Cleantex technician fogging premises during pest control treatment" },
+          { src: `${import.meta.env.BASE_URL}images/fumigation-spray-1.jpg`, alt: "Cleantex technician carrying fumigation equipment" },
         ],
         before: "Active pest infestation — cockroaches, rodents, mosquitoes or termites causing damage and health risks",
         after: "Treated, pest-free premises with nesting and entry points addressed and prevention advice provided",

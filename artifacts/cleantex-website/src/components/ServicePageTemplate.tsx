@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Link } from "wouter";
 import { motion } from "framer-motion";
 import { ChevronRight, MessageCircle, Phone, CheckCircle2, PlusCircle, ChevronLeft } from "lucide-react";
@@ -52,6 +52,12 @@ export function ServicePageTemplate({
   const waLink = WA_BASE + encodeURIComponent(waMessage);
   const [slide, setSlide] = useState(0);
   const slides = beforeAfter?.carousel ?? [];
+
+  useEffect(() => {
+    if (slides.length < 2) return;
+    const timer = setInterval(() => setSlide(s => (s + 1) % slides.length), 4000);
+    return () => clearInterval(timer);
+  }, [slides.length]);
 
   return (
     <div className="min-h-screen bg-background font-sans text-foreground">
