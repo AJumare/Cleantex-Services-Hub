@@ -1,6 +1,6 @@
 import { Link } from "wouter";
 import { motion } from "framer-motion";
-import { ChevronRight, MessageCircle, Phone, CheckCircle2 } from "lucide-react";
+import { ChevronRight, MessageCircle, Phone, CheckCircle2, PlusCircle } from "lucide-react";
 import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
 import { LucideIcon } from "lucide-react";
@@ -17,6 +17,7 @@ export interface ServicePageProps {
   closingHeadline: string;
   waMessage: string;
   icon: LucideIcon;
+  addOns?: string[];
 }
 
 const WA_BASE = "https://wa.me/2348064551684?text=";
@@ -34,6 +35,7 @@ export function ServicePageTemplate({
   closingHeadline,
   waMessage,
   icon: Icon,
+  addOns,
 }: ServicePageProps) {
   const waLink = WA_BASE + encodeURIComponent(waMessage);
 
@@ -125,6 +127,27 @@ export function ServicePageTemplate({
             </div>
           </div>
         </section>
+
+        {/* Add-on Services */}
+        {addOns && addOns.length > 0 && (
+          <section className="py-16 bg-white border-t border-border">
+            <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+              <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6 }}>
+                <h2 className="text-primary font-bold tracking-widest uppercase text-sm mb-3">Optional Extras</h2>
+                <h3 className="text-2xl md:text-3xl font-display font-extrabold text-foreground mb-2">Available Add-on Services</h3>
+                <p className="text-muted-foreground mb-6">These services are available on request and priced separately. Just let us know when booking.</p>
+                <ul className="flex flex-wrap gap-3">
+                  {addOns.map((item) => (
+                    <li key={item} className="flex items-center gap-2 bg-primary/5 border border-primary/20 text-foreground font-medium px-4 py-2.5 rounded-full">
+                      <PlusCircle size={16} className="text-primary shrink-0" />
+                      {item}
+                    </li>
+                  ))}
+                </ul>
+              </motion.div>
+            </div>
+          </section>
+        )}
 
         {/* How It Works */}
         {howItWorks.length > 0 && (

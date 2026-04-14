@@ -16,10 +16,13 @@ export default function PostConstructionPage() {
         "Dust removal from all surfaces",
         "Paint and cement residue removal",
         "Window and glass cleaning",
-        "Floor scrubbing and polishing",
+        "Floor scrubbing",
         "Fixture and fitting cleaning",
         "Kitchen and bathroom preparation",
         "Waste and debris removal",
+      ]}
+      addOns={[
+        "Floor polishing",
       ]}
       whatYouGet={[
         "Specialist equipment for construction dust",

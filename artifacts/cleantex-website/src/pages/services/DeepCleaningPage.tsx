@@ -14,12 +14,16 @@ export default function DeepCleaningPage() {
       ]}
       whatWeOffer={[
         "Kitchen deep clean (appliances, cupboards, surfaces)",
-        "Bathroom scrubbing and descaling",
-        "Floor scrubbing and polishing",
+        "Bathroom scrubbing and sanitising",
+        "Floor scrubbing",
         "Ceiling fans and light fittings",
         "Window tracks and blinds",
         "Behind and underneath furniture and appliances",
         "Wall spot-cleaning",
+      ]}
+      addOns={[
+        "Descaling (toilets, sinks and tiles)",
+        "Floor polishing",
       ]}
       whatYouGet={[
         "Thorough room-by-room checklist",
