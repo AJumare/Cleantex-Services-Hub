@@ -42,6 +42,19 @@ export default function PostConstructionPage() {
         { q: "Can you clean large commercial properties?", a: "Yes. We handle residential and commercial post-construction cleans of all sizes." },
         { q: "How long does it take?", a: "This depends on the size of the property and the extent of construction work. We will give a time estimate after assessing the space." },
       ]}
+      beforeAfter={{
+        image: `${import.meta.env.BASE_URL}images/post-con-window-clean.jpg`,
+        imageAlt: "Cleantex technician cleaning windows after construction",
+        before: "Dust-coated surfaces, paint splatter, cement residue and construction debris throughout the property",
+        after: "Fully cleaned, polished and move-in ready — every surface, fixture and fitting prepared to the highest standard",
+        disclaimer: "Results depend on the scale of construction work. We will assess and agree on scope before starting.",
+      }}
+      gallery={[
+        { src: `${import.meta.env.BASE_URL}images/post-con-stairs-before-after.jpg`, alt: "Post-construction staircase before and after cleaning" },
+        { src: `${import.meta.env.BASE_URL}images/post-con-floor-before-after.jpg`, alt: "Post-construction floor before and after cleaning" },
+        { src: `${import.meta.env.BASE_URL}images/post-con-tiles-before-after.jpg`, alt: "Post-construction tiles before and after cleaning" },
+        { src: `${import.meta.env.BASE_URL}images/post-con-toilet-before-after.jpg`, alt: "Post-construction toilet before and after cleaning" },
+      ]}
       closingHeadline="Your space, move-in ready"
       waMessage="Hello Cleantex! I'd like to enquire about your Post-Construction Cleaning service. Please share more details."
     />
