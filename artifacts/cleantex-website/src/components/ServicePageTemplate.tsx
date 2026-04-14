@@ -18,6 +18,7 @@ export interface ServicePageProps {
   waMessage: string;
   icon: LucideIcon;
   addOns?: string[];
+  gallery?: { src: string; alt: string }[];
 }
 
 const WA_BASE = "https://wa.me/2348064551684?text=";
@@ -36,6 +37,7 @@ export function ServicePageTemplate({
   waMessage,
   icon: Icon,
   addOns,
+  gallery,
 }: ServicePageProps) {
   const waLink = WA_BASE + encodeURIComponent(waMessage);
 
@@ -127,6 +129,26 @@ export function ServicePageTemplate({
             </div>
           </div>
         </section>
+
+        {/* Gallery */}
+        {gallery && gallery.length > 0 && (
+          <section className="py-16 bg-white">
+            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+              <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6 }}>
+                <h2 className="text-primary font-bold tracking-widest uppercase text-sm mb-3">Our Work</h2>
+                <h3 className="text-2xl md:text-3xl font-display font-extrabold text-foreground mb-8">See the Results</h3>
+                <div className={`grid gap-4 ${gallery.length === 1 ? "grid-cols-1 max-w-2xl" : gallery.length === 2 ? "sm:grid-cols-2" : "sm:grid-cols-2 lg:grid-cols-3"}`}>
+                  {gallery.map((img, i) => (
+                    <motion.div key={i} initial={{ opacity: 0, scale: 0.97 }} whileInView={{ opacity: 1, scale: 1 }} viewport={{ once: true }} transition={{ duration: 0.4, delay: i * 0.1 }}
+                      className="rounded-2xl overflow-hidden border border-border shadow-sm aspect-[4/3]">
+                      <img src={img.src} alt={img.alt} className="w-full h-full object-cover" />
+                    </motion.div>
+                  ))}
+                </div>
+              </motion.div>
+            </div>
+          </section>
+        )}
 
         {/* Add-on Services */}
         {addOns && addOns.length > 0 && (

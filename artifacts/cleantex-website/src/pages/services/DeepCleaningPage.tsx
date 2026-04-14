@@ -43,6 +43,14 @@ export default function DeepCleaningPage() {
         { q: "Do I need to be present during the clean?", a: "Not necessarily. Many clients arrange access and we handle the rest. You are welcome to stay if you prefer." },
         { q: "How often should I deep clean?", a: "We recommend a full deep clean every 3 to 6 months, with more frequent sessions during the harmattan season." },
       ]}
+      gallery={[
+        { src: `${import.meta.env.BASE_URL}images/deep-clean-before-after.jpg`, alt: "Deep cleaning before and after - grimy surface restored to spotless" },
+        { src: `${import.meta.env.BASE_URL}images/deep-clean-light-fitting.jpg`, alt: "Cleantex technician cleaning ceiling light fitting" },
+        { src: `${import.meta.env.BASE_URL}images/deep-clean-img_6182.jpg`, alt: "Cleantex deep cleaning work" },
+        { src: `${import.meta.env.BASE_URL}images/deep-clean-img_6444_2.jpg`, alt: "Cleantex deep cleaning work" },
+        { src: `${import.meta.env.BASE_URL}images/deep-clean-img_6597.jpg`, alt: "Cleantex deep cleaning work" },
+        { src: `${import.meta.env.BASE_URL}images/deep-clean-img_6637.jpg`, alt: "Cleantex deep cleaning work" },
+      ]}
       closingHeadline="Ready for a truly clean space?"
       waMessage="Hello Cleantex! I'd like to enquire about your Deep Cleaning service. Please share more details."
     />

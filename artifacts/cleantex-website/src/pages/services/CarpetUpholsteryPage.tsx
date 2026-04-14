@@ -188,37 +188,6 @@ export default function CarpetUpholsteryPage() {
           </div>
         </section>
 
-        {/* ── Pricing ── */}
-        <section className="py-20 bg-primary text-primary-foreground relative overflow-hidden">
-          <div className="absolute inset-0 opacity-10" style={{ backgroundImage: "radial-gradient(circle at 2px 2px, white 1px, transparent 0)", backgroundSize: "32px 32px" }} />
-          <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-            <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6 }}>
-              <h2 className="text-accent font-bold tracking-widest uppercase text-sm mb-3">Pricing Guide</h2>
-              <h3 className="text-3xl md:text-4xl font-display font-extrabold mb-4">Transparent Pricing</h3>
-              <p className="text-primary-foreground/80 text-lg mb-8">
-                Final pricing depends on size, fabric type and level of staining. Here's a starting guide:
-              </p>
-              <div className="grid sm:grid-cols-3 gap-4 mb-8">
-                {[
-                  { label: "Single Seater", price: "Contact for pricing" },
-                  { label: "3-Seater Sofa", price: "Contact for pricing" },
-                  { label: "Rugs", price: "Priced per sq metre" },
-                ].map((p) => (
-                  <div key={p.label} className="bg-white/10 backdrop-blur-sm border border-white/20 rounded-2xl p-5 text-center">
-                    <p className="font-bold text-white mb-1">{p.label}</p>
-                    <p className="text-primary-foreground/70 text-sm">{p.price}</p>
-                  </div>
-                ))}
-              </div>
-              <a href={WA_LINK} target="_blank" rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 bg-accent text-accent-foreground font-bold px-7 py-4 rounded-full hover:opacity-90 transition-opacity shadow-lg">
-                <MessageCircle size={20} />
-                Get Your Custom Quote
-              </a>
-            </motion.div>
-          </div>
-        </section>
-
         {/* ── How It Works ── */}
         <section className="py-20 bg-white">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
