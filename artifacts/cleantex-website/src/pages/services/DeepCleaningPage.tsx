@@ -26,6 +26,7 @@ export default function DeepCleaningPage() {
         "Floor polishing",
       ]}
       whatYouGet={[
+        "A thoroughly clean space",
         "Thorough room-by-room checklist",
         "Industrial-grade equipment and products",
         "Trained, uniformed technicians",
@@ -51,12 +52,10 @@ export default function DeepCleaningPage() {
         disclaimer: "Results depend on the condition and age of the build-up. We will always be upfront about what is achievable.",
       }}
       gallery={[
-        { src: `${import.meta.env.BASE_URL}images/deep-clean-before-after.jpg`, alt: "Deep cleaning before and after - grimy surface restored to spotless" },
         { src: `${import.meta.env.BASE_URL}images/deep-clean-light-fitting.jpg`, alt: "Cleantex technician cleaning ceiling light fitting" },
         { src: `${import.meta.env.BASE_URL}images/deep-clean-img_6182.jpg`, alt: "Cleantex deep cleaning work" },
         { src: `${import.meta.env.BASE_URL}images/deep-clean-img_6444_2.jpg`, alt: "Cleantex deep cleaning work" },
         { src: `${import.meta.env.BASE_URL}images/deep-clean-img_6597.jpg`, alt: "Cleantex deep cleaning work" },
-        { src: `${import.meta.env.BASE_URL}images/deep-clean-img_6637.jpg`, alt: "Cleantex deep cleaning work" },
       ]}
       closingHeadline="Ready for a truly clean space?"
       waMessage="Hello Cleantex! I'd like to enquire about your Deep Cleaning service. Please share more details."
