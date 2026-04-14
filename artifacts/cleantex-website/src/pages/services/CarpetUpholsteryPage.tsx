@@ -36,7 +36,7 @@ const howItWorks = [
 const faqs = [
   {
     q: "How long does it take to dry?",
-    a: "Typically 4–8 hours depending on airflow and the thickness of the fabric. We recommend keeping the area ventilated after the clean.",
+    a: "Our staff will leave the upholstery damp, not wet. It will be completely dry within 24 hours, plus or minus 8 hours, depending on the level of ventilation in the space.",
   },
   {
     q: "Will all stains come out?",
