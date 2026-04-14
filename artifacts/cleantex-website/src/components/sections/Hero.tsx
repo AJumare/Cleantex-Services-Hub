@@ -7,7 +7,7 @@ export function Hero() {
       {/* Background Image */}
       <div className="absolute inset-0 z-0">
         <img
-          src={`${import.meta.env.BASE_URL}images/hero-bg.png`}
+          src={`${import.meta.env.BASE_URL}images/hero-bg.jpg`}
           alt="Abstract clean background"
           className="w-full h-full object-cover opacity-60"
         />
