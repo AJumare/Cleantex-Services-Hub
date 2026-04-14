@@ -1,6 +1,7 @@
+import { useState } from "react";
 import { Link } from "wouter";
 import { motion } from "framer-motion";
-import { ChevronRight, MessageCircle, Phone, CheckCircle2, PlusCircle } from "lucide-react";
+import { ChevronRight, MessageCircle, Phone, CheckCircle2, PlusCircle, ChevronLeft } from "lucide-react";
 import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
 import { LucideIcon } from "lucide-react";
@@ -20,8 +21,9 @@ export interface ServicePageProps {
   addOns?: string[];
   gallery?: { src: string; alt: string }[];
   beforeAfter?: {
-    image: string;
-    imageAlt: string;
+    image?: string;
+    imageAlt?: string;
+    carousel?: { src: string; alt: string }[];
     before: string;
     after: string;
     disclaimer?: string;
@@ -48,6 +50,8 @@ export function ServicePageTemplate({
   beforeAfter,
 }: ServicePageProps) {
   const waLink = WA_BASE + encodeURIComponent(waMessage);
+  const [slide, setSlide] = useState(0);
+  const slides = beforeAfter?.carousel ?? [];
 
   return (
     <div className="min-h-screen bg-background font-sans text-foreground">
@@ -121,7 +125,34 @@ export function ServicePageTemplate({
                   </ul>
                   {beforeAfter && (
                     <div className="mt-auto pt-10">
-                      <img src={beforeAfter.image} alt={beforeAfter.imageAlt} className="rounded-3xl w-full object-cover shadow-lg aspect-[4/3]" />
+                      {slides.length > 0 ? (
+                        <div className="relative rounded-3xl overflow-hidden shadow-lg aspect-[4/3] bg-black">
+                          {slides.map((s, i) => (
+                            <img key={i} src={s.src} alt={s.alt}
+                              className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-500 ${i === slide ? "opacity-100" : "opacity-0"}`} />
+                          ))}
+                          {slides.length > 1 && (
+                            <>
+                              <button onClick={() => setSlide((slide - 1 + slides.length) % slides.length)}
+                                className="absolute left-3 top-1/2 -translate-y-1/2 bg-black/40 hover:bg-black/60 text-white rounded-full p-1.5 transition">
+                                <ChevronLeft size={20} />
+                              </button>
+                              <button onClick={() => setSlide((slide + 1) % slides.length)}
+                                className="absolute right-3 top-1/2 -translate-y-1/2 bg-black/40 hover:bg-black/60 text-white rounded-full p-1.5 transition">
+                                <ChevronRight size={20} />
+                              </button>
+                              <div className="absolute bottom-3 left-1/2 -translate-x-1/2 flex gap-2">
+                                {slides.map((_, i) => (
+                                  <button key={i} onClick={() => setSlide(i)}
+                                    className={`w-2 h-2 rounded-full transition ${i === slide ? "bg-white" : "bg-white/40"}`} />
+                                ))}
+                              </div>
+                            </>
+                          )}
+                        </div>
+                      ) : beforeAfter.image ? (
+                        <img src={beforeAfter.image} alt={beforeAfter.imageAlt} className="rounded-3xl w-full object-cover shadow-lg aspect-[4/3]" />
+                      ) : null}
                     </div>
                   )}
                 </motion.div>
