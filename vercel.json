@@ -1,6 +1,5 @@
 {
-  "buildCommand": "pnpm install && pnpm --filter @workspace/cleantex-website run build:vercel",
+  "buildCommand": "cd artifacts/cleantex-website && pnpm install && pnpm run build",
   "outputDirectory": "artifacts/cleantex-website/dist",
-  "installCommand": "pnpm install",
-  "framework": null
+  "rewrites": [{ "source": "/api/(.*)", "destination": "/api/$1" }]
 }
