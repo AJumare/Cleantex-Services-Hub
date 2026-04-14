@@ -109,7 +109,7 @@ export function ServicePageTemplate({
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="grid md:grid-cols-2 gap-12">
               {whatWeOffer.length > 0 && (
-                <motion.div initial={{ opacity: 0, x: -20 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} transition={{ duration: 0.6 }}>
+                <motion.div initial={{ opacity: 0, x: -20 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} transition={{ duration: 0.6 }} className="flex flex-col">
                   <h3 className="text-2xl font-display font-extrabold text-foreground mb-6">What We Offer</h3>
                   <ul className="space-y-3">
                     {whatWeOffer.map((item) => (
@@ -120,14 +120,14 @@ export function ServicePageTemplate({
                     ))}
                   </ul>
                   {beforeAfter && (
-                    <div className="mt-10">
+                    <div className="mt-auto pt-10">
                       <img src={beforeAfter.image} alt={beforeAfter.imageAlt} className="rounded-3xl w-full object-cover shadow-lg aspect-[4/3]" />
                     </div>
                   )}
                 </motion.div>
               )}
               {whatYouGet.length > 0 && (
-                <motion.div initial={{ opacity: 0, x: 20 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} transition={{ duration: 0.6 }}>
+                <motion.div initial={{ opacity: 0, x: 20 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} transition={{ duration: 0.6 }} className="flex flex-col">
                   <h3 className="text-2xl font-display font-extrabold text-foreground mb-6">What You Get</h3>
                   <ul className="space-y-3">
                     {whatYouGet.map((item) => (
@@ -138,22 +138,24 @@ export function ServicePageTemplate({
                     ))}
                   </ul>
                   {beforeAfter && (
-                    <div className="mt-10 bg-primary/5 border border-primary/10 rounded-3xl p-6">
-                      <p className="text-sm font-bold tracking-widest uppercase text-primary mb-1">Before &amp; After</p>
-                      <p className="font-semibold text-foreground mb-1">The honest expectation</p>
-                      <div className="mt-3 grid grid-cols-2 gap-3 text-sm">
-                        <div className="bg-red-50 border border-red-100 rounded-xl p-3">
-                          <p className="font-bold text-red-700 mb-1">Before</p>
-                          <p className="text-red-600">{beforeAfter.before}</p>
+                    <div className="mt-auto pt-10">
+                      <div className="bg-primary/5 border border-primary/10 rounded-3xl p-6">
+                        <p className="text-sm font-bold tracking-widest uppercase text-primary mb-1">Before &amp; After</p>
+                        <p className="font-semibold text-foreground mb-1">The honest expectation</p>
+                        <div className="mt-3 grid grid-cols-2 gap-3 text-sm">
+                          <div className="bg-red-50 border border-red-100 rounded-xl p-3">
+                            <p className="font-bold text-red-700 mb-1">Before</p>
+                            <p className="text-red-600">{beforeAfter.before}</p>
+                          </div>
+                          <div className="bg-green-50 border border-green-100 rounded-xl p-3">
+                            <p className="font-bold text-green-700 mb-1">After</p>
+                            <p className="text-green-600">{beforeAfter.after}</p>
+                          </div>
                         </div>
-                        <div className="bg-green-50 border border-green-100 rounded-xl p-3">
-                          <p className="font-bold text-green-700 mb-1">After</p>
-                          <p className="text-green-600">{beforeAfter.after}</p>
-                        </div>
+                        {beforeAfter.disclaimer && (
+                          <p className="text-xs text-muted-foreground mt-3 italic">{beforeAfter.disclaimer}</p>
+                        )}
                       </div>
-                      {beforeAfter.disclaimer && (
-                        <p className="text-xs text-muted-foreground mt-3 italic">{beforeAfter.disclaimer}</p>
-                      )}
                     </div>
                   )}
                 </motion.div>

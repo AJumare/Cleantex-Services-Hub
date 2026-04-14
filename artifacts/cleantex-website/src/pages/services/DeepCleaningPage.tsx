@@ -46,7 +46,7 @@ export default function DeepCleaningPage() {
       beforeAfter={{
         image: `${import.meta.env.BASE_URL}images/deep-clean-before-after.jpg`,
         imageAlt: "Deep cleaning before and after - heavily soiled surface restored to clean",
-        before: "Built-up grime, mould, bacteria and stains on surfaces, floors and hidden areas",
+        before: "Built-up dust, grime, mould, bacteria and stains on surfaces, floors and hidden areas",
         after: "Thoroughly cleaned, sanitised surfaces with no trace of dirt, mould or odour",
         disclaimer: "Results depend on the condition and age of the build-up. We will always be upfront about what is achievable.",
       }}
