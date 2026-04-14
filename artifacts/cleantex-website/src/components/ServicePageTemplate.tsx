@@ -19,6 +19,13 @@ export interface ServicePageProps {
   icon: LucideIcon;
   addOns?: string[];
   gallery?: { src: string; alt: string }[];
+  beforeAfter?: {
+    image: string;
+    imageAlt: string;
+    before: string;
+    after: string;
+    disclaimer?: string;
+  };
 }
 
 const WA_BASE = "https://wa.me/2348064551684?text=";
@@ -38,6 +45,7 @@ export function ServicePageTemplate({
   icon: Icon,
   addOns,
   gallery,
+  beforeAfter,
 }: ServicePageProps) {
   const waLink = WA_BASE + encodeURIComponent(waMessage);
 
@@ -92,6 +100,38 @@ export function ServicePageTemplate({
                   {whyItMatters.map((p, i) => <p key={i}>{p}</p>)}
                 </div>
               </motion.div>
+            </div>
+          </section>
+        )}
+
+        {/* Before & After */}
+        {beforeAfter && (
+          <section className="py-20 bg-muted/30">
+            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+              <div className="grid md:grid-cols-2 gap-12 items-center">
+                <motion.div initial={{ opacity: 0, x: -20 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} transition={{ duration: 0.6 }}>
+                  <img src={beforeAfter.image} alt={beforeAfter.imageAlt} className="rounded-3xl w-full object-cover shadow-lg aspect-[4/3]" />
+                </motion.div>
+                <motion.div initial={{ opacity: 0, x: 20 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} transition={{ duration: 0.6 }}>
+                  <div className="bg-primary/5 border border-primary/10 rounded-3xl p-6">
+                    <p className="text-sm font-bold tracking-widest uppercase text-primary mb-1">Before &amp; After</p>
+                    <p className="font-semibold text-foreground mb-4 text-lg">The honest expectation</p>
+                    <div className="grid grid-cols-2 gap-3 text-sm">
+                      <div className="bg-red-50 border border-red-100 rounded-xl p-3">
+                        <p className="font-bold text-red-700 mb-1">Before</p>
+                        <p className="text-red-600">{beforeAfter.before}</p>
+                      </div>
+                      <div className="bg-green-50 border border-green-100 rounded-xl p-3">
+                        <p className="font-bold text-green-700 mb-1">After</p>
+                        <p className="text-green-600">{beforeAfter.after}</p>
+                      </div>
+                    </div>
+                    {beforeAfter.disclaimer && (
+                      <p className="text-xs text-muted-foreground mt-3 italic">{beforeAfter.disclaimer}</p>
+                    )}
+                  </div>
+                </motion.div>
+              </div>
             </div>
           </section>
         )}

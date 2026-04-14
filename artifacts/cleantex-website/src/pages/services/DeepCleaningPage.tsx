@@ -43,6 +43,13 @@ export default function DeepCleaningPage() {
         { q: "Do I need to be present during the clean?", a: "Not necessarily. Many clients arrange access and we handle the rest. You are welcome to stay if you prefer." },
         { q: "How often should I deep clean?", a: "We recommend a full deep clean every 3 to 6 months, with more frequent sessions during the harmattan season." },
       ]}
+      beforeAfter={{
+        image: `${import.meta.env.BASE_URL}images/deep-clean-before-after.jpg`,
+        imageAlt: "Deep cleaning before and after - heavily soiled surface restored to clean",
+        before: "Built-up grime, mould, bacteria and stains on surfaces, floors and hidden areas",
+        after: "Thoroughly cleaned, sanitised surfaces with no trace of dirt, mould or odour",
+        disclaimer: "Results depend on the condition and age of the build-up. We will always be upfront about what is achievable.",
+      }}
       gallery={[
         { src: `${import.meta.env.BASE_URL}images/deep-clean-before-after.jpg`, alt: "Deep cleaning before and after - grimy surface restored to spotless" },
         { src: `${import.meta.env.BASE_URL}images/deep-clean-light-fitting.jpg`, alt: "Cleantex technician cleaning ceiling light fitting" },
