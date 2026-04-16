@@ -165,7 +165,7 @@ export function Contact() {
                   </div>
                   <div>
                     <p className="text-sm text-secondary-foreground/70 mb-1">Call Us</p>
-                    <a href="tel:08064551684" className="font-semibold text-white text-lg hover:text-accent transition-colors">08064551684</a>
+                    <a href="tel:08064551684" onClick={(e) => { e.preventDefault(); (window as any).gtag_report_conversion('tel:+2348064551684'); }} className="font-semibold text-white text-lg hover:text-accent transition-colors">08064551684</a>
                   </div>
                 </div>
 

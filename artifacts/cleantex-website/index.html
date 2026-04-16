@@ -18,6 +18,22 @@
       gtag('js', new Date());
       gtag('config', 'G-B2LFWKJELB');
     </script>
+    <script>
+      function gtag_report_conversion(url) {
+        var callback = function () {
+          if (typeof(url) != 'undefined') {
+            window.location = url;
+          }
+        };
+        gtag('event', 'conversion', {
+            'send_to': 'AW-18064296796/j2Z6CJSnm50cENyW3aVD',
+            'value': 1.0,
+            'currency': 'USD',
+            'event_callback': callback
+        });
+        return false;
+      }
+    </script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1" />
     <title>Cleantex Environmental Services</title>
     <link rel="icon" type="image/x-icon" href="/favicon.ico" />

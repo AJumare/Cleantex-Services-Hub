@@ -63,7 +63,7 @@ export function Footer() {
             <h4 className="font-bold text-lg mb-6">Contact Us</h4>
             <ul className="space-y-3 text-white/70 text-sm">
               <li>📍 No. 28 Liverpool Close, Suncity Estate, Abuja</li>
-              <li><a href="tel:08064551684" className="hover:text-primary transition-colors">📞 08064551684</a></li>
+              <li><a href="tel:08064551684" onClick={(e) => { e.preventDefault(); (window as any).gtag_report_conversion('tel:+2348064551684'); }} className="hover:text-primary transition-colors">📞 08064551684</a></li>
               <li><a href="https://wa.me/2348064551684" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">💬 WhatsApp (24hrs): 08064551684</a></li>
               <li><a href="mailto:Cleantexnigeria@gmail.com" className="hover:text-primary transition-colors">✉️ Cleantexnigeria@gmail.com</a></li>
               <li>🕐 Mon–Fri: 8:30am – 4:30pm</li>

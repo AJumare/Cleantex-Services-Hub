@@ -149,7 +149,7 @@ export function Navbar() {
                     <div className="border-t border-border" />
                     <a
                       href="tel:+2348064551684"
-                      onClick={() => setDropdownOpen(false)}
+                      onClick={(e) => { e.preventDefault(); setDropdownOpen(false); (window as any).gtag_report_conversion('tel:+2348064551684'); }}
                       className="flex items-center gap-3 px-5 py-4 hover:bg-accent/50 transition-colors"
                     >
                       <div className="w-8 h-8 rounded-full bg-blue-100 flex items-center justify-center">

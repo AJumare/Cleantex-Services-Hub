@@ -90,6 +90,7 @@ export default function CarpetUpholsteryPage() {
                   Get a Quote on WhatsApp
                 </a>
                 <a href={CALL_LINK}
+                  onClick={(e) => { e.preventDefault(); (window as any).gtag_report_conversion('tel:+2348064551684'); }}
                   className="inline-flex items-center gap-2 bg-white/20 text-white font-bold px-7 py-4 rounded-full hover:bg-white/30 transition-colors backdrop-blur-sm">
                   <Phone size={20} />
                   Call Us
@@ -243,6 +244,7 @@ export default function CarpetUpholsteryPage() {
                   Get a Quote on WhatsApp
                 </a>
                 <a href={CALL_LINK}
+                  onClick={(e) => { e.preventDefault(); (window as any).gtag_report_conversion('tel:+2348064551684'); }}
                   className="inline-flex items-center gap-2 border-2 border-primary text-primary font-bold px-7 py-4 rounded-full hover:bg-primary hover:text-primary-foreground transition-colors">
                   <Phone size={20} />
                   Call Us
