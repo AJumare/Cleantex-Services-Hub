@@ -11,7 +11,7 @@ export default function CallButton() {
         <svg
           xmlns="http://www.w3.org/2000/svg"
           viewBox="0 0 24 24"
-          fill="white"
+          fill="#1B4D3E"
           width="24"
           height="24"
           aria-hidden="true"
