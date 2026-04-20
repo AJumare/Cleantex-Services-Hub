@@ -16,6 +16,7 @@ import LaundryPage from "@/pages/services/LaundryPage";
 import ResidentialCleaningPage from "@/pages/services/ResidentialCleaningPage";
 import JanitorialPage from "@/pages/services/JanitorialPage";
 import StaffOutsourcingPage from "@/pages/services/StaffOutsourcingPage";
+import WhatsAppButton from "@/components/WhatsAppButton";
 
 const queryClient = new QueryClient();
 
@@ -58,6 +59,7 @@ function App() {
         </WouterRouter>
         <Toaster />
         <Analytics />
+        <WhatsAppButton />
       </TooltipProvider>
     </QueryClientProvider>
   );
