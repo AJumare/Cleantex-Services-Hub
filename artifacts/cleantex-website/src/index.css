@@ -215,27 +215,31 @@
   50%       { box-shadow: 0 6px 26px rgba(37,211,102,.7), 0 2px 10px rgba(0,0,0,.22); }
 }
 
-/* ── Mobile: labels always visible ──────────────────────── */
+/* ── Mobile: compact icon-only circles ───────────────────── */
 @media (max-width: 640px) {
   .call-fab,
   .whatsapp-fab {
-    height: 48px;
-    border-radius: 24px;
-    right: 16px;
+    height: 44px;
+    border-radius: 50%;
+    right: 14px;
+    overflow: hidden;
   }
 
-  .whatsapp-fab { bottom: 80px; }
-  .call-fab { bottom: 20px; }
+  .whatsapp-fab { bottom: 72px; }
+  .call-fab     { bottom: 20px; }
 
   .fab-icon {
-    width: 48px;
-    height: 48px;
+    width: 44px;
+    height: 44px;
   }
 
+  .fab-icon svg {
+    width: 20px;
+    height: 20px;
+  }
+
+  /* Keep labels hidden on mobile — icon only */
   .fab-label {
-    max-width: 160px;
-    opacity: 1;
-    padding-left: 14px;
-    padding-right: 2px;
+    display: none;
   }
 }
