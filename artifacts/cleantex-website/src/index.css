@@ -185,18 +185,24 @@
 /* ── Call button ─────────────────────────────────────────── */
 .call-fab {
   bottom: 24px;
+  width: 56px;
+  height: 56px;
   border-radius: 50%;
   background-color: #ffffff;
   border: 3.5px solid #1B4D3E;
+  box-sizing: border-box;
   box-shadow: 0 4px 16px rgba(27, 77, 62, 0.2), 0 2px 6px rgba(0,0,0,0.12);
   animation: call-pulse 2.4s ease-in-out infinite;
   animation-delay: 1.2s;
+  overflow: visible;
 }
 
 .call-fab:hover {
+  width: auto;
   border-radius: 28px;
   box-shadow: 0 6px 22px rgba(27, 77, 62, 0.35), 0 3px 10px rgba(0,0,0,0.15);
   animation: none;
+  overflow: hidden;
 }
 
 @keyframes call-pulse {
@@ -233,7 +239,7 @@
   }
 
   .whatsapp-fab { bottom: 72px; }
-  .call-fab     { bottom: 20px; }
+  .call-fab     { bottom: 20px; width: 44px; height: 44px; }
 
   .fab-icon {
     width: 44px;
