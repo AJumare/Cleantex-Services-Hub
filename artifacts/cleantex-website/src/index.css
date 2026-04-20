@@ -188,6 +188,7 @@
   width: 56px;
   height: 56px;
   border-radius: 50%;
+  justify-content: center;
   background-color: #ffffff;
   border: 3.5px solid #1B4D3E;
   box-sizing: border-box;
@@ -200,6 +201,7 @@
 .call-fab:hover {
   width: auto;
   border-radius: 28px;
+  justify-content: flex-start;
   box-shadow: 0 6px 22px rgba(27, 77, 62, 0.35), 0 3px 10px rgba(0,0,0,0.15);
   animation: none;
   overflow: hidden;
