@@ -128,82 +128,114 @@
   }
 }
 
-/* ── Floating Call button ────────────────────────────────── */
-.call-fab {
+/* ── Shared FAB styles ───────────────────────────────────── */
+.call-fab,
+.whatsapp-fab {
   position: fixed;
-  bottom: 92px;
   right: 24px;
   z-index: 9999;
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  border-radius: 28px;
+  height: 56px;
+  overflow: hidden;
+  text-decoration: none;
+  transition: box-shadow 0.2s ease;
+}
+
+/* Label – hidden on desktop, slides in on hover */
+.fab-label {
+  color: white;
+  font-size: 13px;
+  font-weight: 700;
+  white-space: nowrap;
+  letter-spacing: 0.02em;
+  max-width: 0;
+  overflow: hidden;
+  opacity: 0;
+  padding-left: 0;
+  padding-right: 0;
+  transition: max-width 0.35s ease, opacity 0.3s ease, padding 0.3s ease;
+}
+
+.call-fab:hover .fab-label,
+.whatsapp-fab:hover .fab-label {
+  max-width: 160px;
+  opacity: 1;
+  padding-left: 16px;
+  padding-right: 4px;
+}
+
+/* Icon circle */
+.fab-icon {
   width: 56px;
   height: 56px;
   border-radius: 50%;
-  background-color: #006B3C;
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-shrink: 0;
+}
+
+/* ── Call button ─────────────────────────────────────────── */
+.call-fab {
+  bottom: 92px;
+  background-color: #006B3C;
   box-shadow: 0 4px 16px rgba(0, 107, 60, 0.4), 0 2px 6px rgba(0,0,0,0.18);
-  animation: wa-pulse 2.4s ease-in-out infinite;
+  animation: call-pulse 2.4s ease-in-out infinite;
   animation-delay: 1.2s;
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
 .call-fab:hover {
-  transform: scale(1.1);
-  box-shadow: 0 6px 22px rgba(0, 107, 60, 0.5), 0 3px 10px rgba(0,0,0,0.22);
+  box-shadow: 0 6px 22px rgba(0, 107, 60, 0.55), 0 3px 10px rgba(0,0,0,0.22);
   animation: none;
 }
 
-@media (max-width: 640px) {
-  .call-fab {
-    width: 48px;
-    height: 48px;
-    bottom: 78px;
-    right: 18px;
-  }
-  .call-fab svg {
-    width: 22px;
-    height: 22px;
-  }
+@keyframes call-pulse {
+  0%, 100% { box-shadow: 0 4px 16px rgba(0,107,60,.4), 0 2px 6px rgba(0,0,0,.18); }
+  50%       { box-shadow: 0 6px 26px rgba(0,107,60,.65), 0 2px 10px rgba(0,0,0,.22); }
 }
 
-/* ── Floating WhatsApp button ─────────────────────────────── */
+/* ── WhatsApp button ─────────────────────────────────────── */
 .whatsapp-fab {
-  position: fixed;
   bottom: 24px;
-  right: 24px;
-  z-index: 9999;
-  width: 56px;
-  height: 56px;
-  border-radius: 50%;
   background-color: #25D366;
-  display: flex;
-  align-items: center;
-  justify-content: center;
   box-shadow: 0 4px 16px rgba(37, 211, 102, 0.45), 0 2px 6px rgba(0,0,0,0.18);
   animation: wa-pulse 2.4s ease-in-out infinite;
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
 .whatsapp-fab:hover {
-  transform: scale(1.1);
-  box-shadow: 0 6px 22px rgba(37, 211, 102, 0.55), 0 3px 10px rgba(0,0,0,0.22);
+  box-shadow: 0 6px 22px rgba(37, 211, 102, 0.6), 0 3px 10px rgba(0,0,0,0.22);
   animation: none;
 }
 
 @keyframes wa-pulse {
-  0%, 100% { transform: scale(1); }
-  50%       { transform: scale(1.08); }
+  0%, 100% { box-shadow: 0 4px 16px rgba(37,211,102,.45), 0 2px 6px rgba(0,0,0,.18); }
+  50%       { box-shadow: 0 6px 26px rgba(37,211,102,.7), 0 2px 10px rgba(0,0,0,.22); }
 }
 
+/* ── Mobile: labels always visible ──────────────────────── */
 @media (max-width: 640px) {
+  .call-fab,
   .whatsapp-fab {
+    height: 48px;
+    border-radius: 24px;
+    right: 16px;
+  }
+
+  .call-fab { bottom: 80px; }
+  .whatsapp-fab { bottom: 20px; }
+
+  .fab-icon {
     width: 48px;
     height: 48px;
-    bottom: 18px;
-    right: 18px;
   }
-  .whatsapp-fab svg {
-    width: 24px;
-    height: 24px;
+
+  .fab-label {
+    max-width: 160px;
+    opacity: 1;
+    padding-left: 14px;
+    padding-right: 2px;
   }
 }
