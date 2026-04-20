@@ -60,8 +60,8 @@ function App() {
         </WouterRouter>
         <Toaster />
         <Analytics />
-        <CallButton />
         <WhatsAppButton />
+        <CallButton />
       </TooltipProvider>
     </QueryClientProvider>
   );
