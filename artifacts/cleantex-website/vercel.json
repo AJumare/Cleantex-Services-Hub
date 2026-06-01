@@ -12,7 +12,7 @@
       ]
     }
   ],
-  "rewrites": [],
+  "rewrites": [{"source": "/(.*)", "destination": "/index.html"}],
   "redirects": [],
   "cleanUrls": true,
   "trailingSlash": false
