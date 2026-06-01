@@ -1,4 +1,5 @@
 {
   "buildCommand": "pnpm install && cd artifacts/cleantex-website && pnpm run build",
-  "outputDirectory": "artifacts/cleantex-website/dist"
+  "outputDirectory": "artifacts/cleantex-website/dist",
+  "rewrites": [{"source": "/(.*)", "destination": "/index.html"}]
 }
